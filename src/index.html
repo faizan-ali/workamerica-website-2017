@@ -51,8 +51,11 @@
 
   <section class="container-fluid">
     <div class="row landing-section justify-content-center">
+      <figure style="position: absolute; height: 60vh; overflow: hidden; bottom:0; right: 0;">
+        <img class="parallax" src="assets/img/header.jpg" width="300" />
+      </figure>
       <div class="row col-sm-10 col-xl-9 align-items-center">
-        <div class="col-md-6 p-4">
+        <div class="col-md-6 p-4 intro-message">
           <h1>Lorem ipsum dolor sit amet.</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.
@@ -61,12 +64,42 @@
           <button class="cta-secondary">Learn more.</button>
         </div>
         <div class="col-md-6 d-flex p-4 align-items-center justify-content-center">
-          <img src="assets/img/skilled-trades.gif" alt="skilled trades" class="mirror" width="400">
         </div>
       </div>
     </div>
   </section>
 
+  <section class="container-fluid">
+    <div class="row employer-benefit-section justify-content-center">
+      <div class="row col-sm-10 col-xl-7 align-items-center justify-content-center">
+        <div class="row col-lg-12 justify-content-center">
+          <h1>What can WorkAmerica do for you?</h1>
+        </div>
+        <div class="col-md-6 d-flex p-4 align-items-center justify-content-center mb-4">
+          <img src="assets/img/search-certificates.gif" alt="certified candidates" width="250">
+        </div>
+        <div class="col-md-6 p-4 mb-4">
+          <h2>Find the certified candidates you're looking for.</h2>
+          <p>
+            Save time and source candidates faster by only reviewing trained and verified candidates, without having to dig through hundreds of unqualified resumes.
+          </p>
+          <span class="learn-more"><i class="fa fa-plus-square-o" aria-hidden="true"></i> learn more</span>
+        </div>
+        <div class="col-md-6 p-4 mt-4 mb-4">
+          <h2>Source an untapped talent pool.</h2>
+          <p>
+            Source an untapped talent pool that doesn't normally have a professional online presence. Source an untapped talent pool that doesn't normally have a professional online presence.
+          </p>
+          <span class="learn-more"><i class="fa fa-plus-square-o" aria-hidden="true"></i> learn more</span>
+        </div>
+        <div class="col-md-6 d-flex p-4 align-items-center justify-content-center mt-4 mb-4">
+          <img src="assets/img/skilled-trades-w.gif" alt="skilled trades" class="mirror" width="270">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/Parallax.js"></script>
+  <script>const p = new Parallax(`.parallax`).init();</script>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>

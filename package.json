@@ -38,5 +38,8 @@
     "webpack": "^2.2.0",
     "webpack-config-htmls": "^1.0.1",
     "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "scroll-parallax": "^1.1.0"
   }
 }

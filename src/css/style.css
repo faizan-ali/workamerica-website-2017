@@ -14,6 +14,14 @@ h1 {
   font-size: 3rem;
   font-weight: 300;
   margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  line-height: 1.5;
 }
 
 p {
@@ -61,6 +69,10 @@ button {
     border: .2rem solid black;
     color: black;
   }
+}
+
+.learn-more {
+  color: #014470;
 }
 
 /************************/
@@ -124,5 +136,21 @@ button {
 .landing-section {
   padding: 6rem 0;
   background-color: #F4F7FB;
+  border-bottom: .1rem solid #E6E6E6;
+  height: 70vh;
+}
+
+.intro-message {
+  background-color: white;
+  box-shadow: .05rem .05rem 1rem .1rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+/************************/
+/***EMPLOYER SPECIFIC****/
+/************************/
+
+.employer-benefit-section {
+  padding: 6rem 0;
   border-bottom: .1rem solid #E6E6E6;
 }
