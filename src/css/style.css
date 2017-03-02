@@ -1,5 +1,5 @@
 @import 'reset';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -30,4 +30,30 @@ body {
 .topnav a {
   color: white;
   text-decoration: none;
+}
+
+.mainnav {
+  height: 6.5rem;
+  background: linear-gradient(0deg,#FFFFFF,#F4F4F4);
+  box-shadow: 0 .05rem .4rem .1rem rgba(0,0,0,.5);
+}
+
+.logo {
+  max-height: 2rem;
+  margin-left: 2rem;
+}
+
+.nav-item {
+  margin-left: 3rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.dropdown {
+  margin-right: 2rem;
+}
+
+.dropdown-item {
+  font-size: 1.8rem;
+  padding: 2rem;
 }
