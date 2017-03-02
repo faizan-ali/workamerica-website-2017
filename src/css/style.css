@@ -1,7 +1,33 @@
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 body {
-  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
-  font-size: 3rem;
-  margin: 2rem;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.topnav {
+  height: 4rem;
+  background: linear-gradient(0deg,#003050,#034b7a);
+  font-size: 1.2rem;
+  color: white;
+}
+
+.topnav li {
+  margin-left: 2rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.topnav-login {
+  padding: .7rem;
+  background-color: #2BA6F2;
+  border-radius: .5rem;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
 }
