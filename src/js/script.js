@@ -1,6 +1,6 @@
 const init = () => {
 
-  console.log('Hello Boilerplate')
+  console.log(`Hello Boilerplate`);
 
 };
 
