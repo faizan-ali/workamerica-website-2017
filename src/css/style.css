@@ -121,6 +121,14 @@ button {
   margin-left: 3rem;
   font-weight: 600;
   font-size: 1.8rem;
+
+  &:hover {
+    border-bottom: .2rem solid #2ba6f2;
+  }
+}
+
+.nav-active {
+  border-bottom: .2rem solid #2ba6f2;
 }
 
 .dropdown-item {
@@ -160,10 +168,51 @@ button {
 }
 
 /************************/
-/***EMPLOYER SPECIFIC****/
+/***BENEFIT SECTION******/
 /************************/
 
-.employer-benefit-section {
+.benefit-section {
   padding: 6rem 0;
   border-bottom: .1rem solid #e6e6e6;
+}
+
+.social-section {
+  height: 40rem;
+  background: linear-gradient(0deg, #003050, #034b7a);
+  color: white;
+}
+
+.social-image-container {
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.social-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .social-image {
+    display: none;
+  }
+  .social-quote {
+    padding: 4rem !important;
+  }
+}
+
+.social-quote {
+  background: linear-gradient(0deg, #003050, #034b7a);
+}
+
+.social-quote p {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.social-quote p span {
+  font-weight: 300;
+  font-style: italic;
 }

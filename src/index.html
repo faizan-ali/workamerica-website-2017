@@ -28,6 +28,9 @@
       <nav class="col-sm-10 col-xl-9 d-flex align-items-center justify-content-between justify-content-md-start">
         <img src="assets/svg/logo.svg" alt="WorkAmerica" class="logo">
         <ul class="nav navbar-nav hidden-sm-down flex-row">
+          <li class="nav-item nav-active">
+            <a class="nav-link">Employers</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link">Educators</a>
           </li>
@@ -41,6 +44,7 @@
               <i aria-hidden="true" class="fa fa-bars"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button">Employers</button>
               <button class="dropdown-item" type="button">Educators</button>
               <button class="dropdown-item" type="button">Job Seekers</button>
             </div>
@@ -71,7 +75,7 @@
   </section>
 
   <section class="container-fluid">
-    <div class="row employer-benefit-section justify-content-center">
+    <div class="row benefit-section justify-content-center">
       <div class="row col-sm-10 col-xl-7 align-items-center justify-content-center">
         <div class="row col-lg-12 justify-content-center">
           <h1>What can WorkAmerica do for you?</h1>
@@ -96,9 +100,34 @@
         <div class="col-md-6 d-flex p-4 align-items-center justify-content-center mt-4 mb-4">
           <img src="assets/img/skilled-trades-w.gif" alt="skilled trades" class="mirror" width="270">
         </div>
+        <div class="col-md-6 d-flex p-4 align-items-center justify-content-center mb-4 mt-4">
+          <img src="assets/img/search-certificates.gif" alt="certified candidates" width="250">
+        </div>
+        <div class="col-md-6 p-4 mb-4 mt-4">
+          <h2>Find the certified candidates you're looking for.</h2>
+          <p>
+            Save time and source candidates faster by only reviewing trained and verified candidates, without having to dig through hundreds of unqualified resumes.
+          </p>
+          <span class="learn-more"><i class="fa fa-plus-square-o" aria-hidden="true"></i> learn more</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="container-fluid">
+    <div class="row social-section">
+      <figure class="social-image-container">
+        <img class="social-image" src="assets/img/recruiter.jpg" />
+      </figure>
+      <div class="row col-xl-3 offset-xl-3 col-md-4 offset-md-2 p-4 social-quote align-items-center">
+        <h1>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</h1>
+        <p>George Clooney<br/>
+          <span>HR Manager at Nespresso</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <script src="js/Parallax.js"></script>
   <script>const p = new Parallax(`.parallax`,
     {
@@ -107,7 +136,8 @@
       center: 0.5,
       safeHeight: -1
     }
-  ).init();</script>
+  ).init();
+  </script>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
