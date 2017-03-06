@@ -1,4 +1,4 @@
-@import 'reset';
+@import 'reset.css';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
 /************************/
@@ -40,7 +40,6 @@ button {
   display: block;
   margin-bottom: 1rem;
   min-width: 17rem;
-  transition: .5s;
 
   &:focus {
     outline: 0;
@@ -144,6 +143,20 @@ button {
   background-color: white;
   box-shadow: .05rem .05rem 1rem .1rem rgba(0, 0, 0, .1);
   border-radius: .5rem;
+}
+
+.header-image {
+  position: absolute;
+  width: 60%;
+  overflow: hidden;
+  bottom:0;
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .header-image {
+    display: none;
+  }
 }
 
 /************************/
