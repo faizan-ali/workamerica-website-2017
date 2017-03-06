@@ -1,5 +1,5 @@
 @import 'reset';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
 /************************/
 /*****GENERAL STUFF******/
@@ -27,7 +27,7 @@ h2 {
 p {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #717F92;
+  color: #717f92;
   line-height: 3rem;
   margin-bottom: 3rem;
 }
@@ -43,7 +43,7 @@ button {
   transition: .5s;
 
   &:focus {
-    outline:0;
+    outline: 0;
   }
 }
 
@@ -52,7 +52,7 @@ button {
 }
 
 .cta-primary {
-  background-color: #2BA6F2;
+  background-color: #2ba6f2;
   color: white;
 
   &:hover {
@@ -62,8 +62,8 @@ button {
 
 .cta-secondary {
   background-color: transparent;
-  border: .2rem solid #2BA6F2;
-  color: #2BA6F2;
+  border: .2rem solid #2ba6f2;
+  color: #2ba6f2;
 
   &:hover {
     border: .2rem solid black;
@@ -81,7 +81,7 @@ button {
 
 .topnav {
   height: 4rem;
-  background: linear-gradient(0deg,#003050,#034b7a);
+  background: linear-gradient(0deg, #003050, #034b7a);
   font-size: 1.2rem;
   color: white;
 }
@@ -96,7 +96,7 @@ button {
 
 .topnav-login {
   padding: .7rem;
-  background-color: #2BA6F2;
+  background-color: #2ba6f2;
   border-radius: .5rem;
 }
 
@@ -107,8 +107,8 @@ button {
 
 .mainnav {
   height: 6.5rem;
-  background: linear-gradient(0deg,#FFFFFF,#F4F4F4);
-  box-shadow: 0 .05rem .4rem .1rem rgba(0,0,0,.5);
+  background: linear-gradient(0deg, white, #f4f4f4);
+  box-shadow: 0 .05rem .4rem .1rem rgba(0, 0, 0, .5);
   position: relative;
   z-index: 2;
 }
@@ -135,14 +135,14 @@ button {
 
 .landing-section {
   padding: 6rem 0;
-  background-color: #F4F7FB;
-  border-bottom: .1rem solid #E6E6E6;
+  background-color: #f4f7fb;
+  border-bottom: .1rem solid #e6e6e6;
   height: 70vh;
 }
 
 .intro-message {
   background-color: white;
-  box-shadow: .05rem .05rem 1rem .1rem rgba(0,0,0,.1);
+  box-shadow: .05rem .05rem 1rem .1rem rgba(0, 0, 0, .1);
   border-radius: .5rem;
 }
 
@@ -152,5 +152,5 @@ button {
 
 .employer-benefit-section {
   padding: 6rem 0;
-  border-bottom: .1rem solid #E6E6E6;
+  border-bottom: .1rem solid #e6e6e6;
 }
