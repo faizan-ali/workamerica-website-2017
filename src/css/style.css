@@ -53,6 +53,7 @@ button {
 .cta-primary {
   background-color: #2ba6f2;
   color: white;
+  margin: 1rem;
 
   &:hover {
     background-color: black;
@@ -63,6 +64,7 @@ button {
   background-color: transparent;
   border: .2rem solid #2ba6f2;
   color: #2ba6f2;
+  margin: 1rem;
 
   &:hover {
     border: .2rem solid black;
@@ -168,12 +170,17 @@ button {
 }
 
 /************************/
-/***BENEFIT SECTION******/
+/********SECTION*********/
 /************************/
 
-.benefit-section {
+.benefit-section, .cta-section, .blog-section  {
   padding: 6rem 0;
   border-bottom: .1rem solid #e6e6e6;
+}
+
+.blog-section {
+  padding-bottom: 0;
+  border: none;
 }
 
 .social-section {
@@ -215,4 +222,91 @@ button {
 .social-quote p span {
   font-weight: 300;
   font-style: italic;
+}
+
+.blog-article-site {
+  background: linear-gradient(0deg, #003050, #034b7a);
+  height: 30rem;
+  text-align: center;
+  color: white;
+  padding: 6rem;
+  transition: .5s;
+}
+
+.blog-article-site:hover {
+  border-bottom: 1rem solid #2ba6f2;
+  cursor: pointer;
+}
+
+.blog-article-site h2 {
+  margin-bottom: 0;
+}
+
+.blog-article-site:nth-child(2){
+  border-left: .2rem solid white;
+  border-right: .2rem solid white;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-article-site:nth-child(2){
+    border: none;
+    border-bottom: .2rem solid white;
+    border-top: .2rem solid white;
+  }
+}
+
+/************************/
+/*******MAIN FOOTER******/
+/************************/
+
+.main-footer {
+  padding: 5rem 0;
+  margin-top: 5rem;
+  background: linear-gradient(0deg, white, #f4f4f4);
+  box-shadow: 0 -.05rem .4rem .1rem rgba(0, 0, 0, .5);
+}
+
+.main-footer ul {
+  line-height: 2;
+  font-size: 1.8rem;
+}
+
+.newsletter-signup {
+  line-height: 2;
+  font-size: 1.8rem;
+}
+
+.newsletter-signup h2, .newsletter-signup p {
+  margin-bottom: 0;
+  line-height: normal;
+}
+
+.newsletter-signup input {
+  width: 80%;
+  border: .2rem solid black;
+  border-radius: .5rem;
+  font-weight: 100;
+  padding-left: 1rem;
+}
+
+.submit-newsletter {
+  font-size: 1.8rem;
+  width: 10%;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-radius: .5rem;
+  font-weight: 100;
+  height: 4.2rem;
+  padding: 0;
+  min-width: 4.2rem;
+  margin-left: .5rem;
+}
+
+.social-icons {
+  font-size: 3rem;
+}
+
+.social-icons i {
+  margin-left: 1rem;
 }
