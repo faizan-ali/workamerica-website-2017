@@ -199,6 +199,19 @@ button {
   flex-direction: row-reverse;
 }
 
+.enter {
+  animation: fadein 1s;
+}
+
+.feature-image-container {
+  overflow: hidden;
+}
+
+.feature-image {
+  border-radius: 50%;
+  border: .2rem solid #2ba6f2;
+}
+
 .blog-section {
   padding-bottom: 0;
   border: none;
@@ -257,6 +270,8 @@ button {
 .blog-article-site:hover {
   border-bottom: 1rem solid #2ba6f2;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 
 .blog-article-site h2 {
@@ -330,10 +345,6 @@ button {
 
 .social-icons i {
   margin-left: 1rem;
-}
-
-.enter {
-  animation: fadein 1s;
 }
 
 @keyframes fadein {

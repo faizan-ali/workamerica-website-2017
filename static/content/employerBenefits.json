@@ -8,17 +8,17 @@
         {
           "featureTitle": "Feature 1",
           "featureContent": "hey hey hey",
-          "featureImage": "#"
+          "featureImage": "static/img/feature.png"
         },
         {
           "featureTitle": "Feature 2",
           "featureContent": "hey hey hey",
-          "featureImage": "#"
+          "featureImage": "static/img/feature.png"
         },
         {
           "featureTitle": "Feature 3",
           "featureContent": "hey hey hey",
-          "featureImage": "#"
+          "featureImage": "static/img/feature.png"
         }
       ]
     },

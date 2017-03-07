@@ -1,0 +1,16 @@
+{
+  "socialProof": [
+    {
+      "quote": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”",
+      "quoteFrom": "George Clooney",
+      "quotePosition": "HR Manager at Nespresso",
+      "picture": "static/img/recruiter.jpg"
+    },
+    {
+      "quote": "“Hey hey hey ipsum dolor sit amet, consectetur adipiscing elit.”",
+      "quoteFrom": "Matt Damon",
+      "quotePosition": "Gorilla Trainer at Zoo",
+      "picture": "static/img/recruiter.jpg"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-//import Link from 'next/link';
 
 import BenefitItem from '../components/BenefitItem';
 

@@ -5,7 +5,9 @@ const FeatureItem = ({featureTitle, featureContent, featureImage}) => {
   return (
     <article className='row col-md-4 p-4 mb-4 justify-content-center align-items-center'>
       <h2 className='row col-md-12 justify-content-center'>{featureTitle}</h2>
-      <img className='row col-md-12 justify-content-center' src={featureImage} alt={featureTitle} />
+      <div className='row col-md-12 justify-content-center feature-image-container'>
+        <img className='feature-image' src={featureImage} alt={featureTitle} width='200' height='200' />
+      </div>
       <p className='row col-md-12 justify-content-center'>{featureContent}</p>
     </article>
   );
