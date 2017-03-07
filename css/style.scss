@@ -1,5 +1,5 @@
-@import 'reset.css';
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 /************************/
 /*****GENERAL STUFF******/
@@ -8,6 +8,10 @@
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
+}
+
+a {
+  color: #000;
 }
 
 h1 {
@@ -57,6 +61,7 @@ button {
 
   &:hover {
     background-color: black;
+    cursor: pointer;
   }
 }
 
@@ -69,6 +74,7 @@ button {
   &:hover {
     border: .2rem solid black;
     color: black;
+    cursor: pointer;
   }
 }
 
@@ -138,12 +144,18 @@ button {
   padding: 2rem;
 }
 
+.fixed-navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
 /************************/
 /********LANDING*********/
 /************************/
 
 .landing-section {
-  padding: 6rem 0;
+  padding: 18rem 0 6rem 0;
   background-color: #f4f7fb;
   border-bottom: .1rem solid #e6e6e6;
   height: 70vh;
