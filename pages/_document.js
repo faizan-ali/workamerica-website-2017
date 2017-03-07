@@ -17,8 +17,12 @@ export default class MyDocument extends Document {
     return (
      <html>
       <Head>
+        <title>WorkAmerica</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+
         <link href='static/img/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png' />
 
+        <script src='//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossOrigin='anonymous' />
         <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js' integrity='sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=' crossOrigin='anonymous'></script>
         <style dangerouslySetInnerHTML={{__html: stylesheet}} />

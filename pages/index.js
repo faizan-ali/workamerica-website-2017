@@ -9,6 +9,9 @@ import PageBlogPosts from '../components/PageBlogPosts';
 
 export default class Home extends React.Component {
   static async getInitialProps () {
+    // Fetch Employer Landing JSON layout
+    const landingRes = await fetch(`http://localhost:3000/static/content/employerLanding.json`);
+    const landingJson = await landingRes.json();
     // Fetch Employer Benefits JSON layout
     const benefitsRes = await fetch(`http://localhost:3000/static/content/employerBenefits.json`);
     const benefitsJson = await benefitsRes.json();
@@ -16,13 +19,18 @@ export default class Home extends React.Component {
     const socialProofRes = await fetch(`http://localhost:3000/static/content/employerSocialProof.json`);
     const socialProofJson = await socialProofRes.json();
     const randomEntry = Math.round(Math.random(socialProofJson.socialProof.length - 1));
+    // Fetch Employer Landing JSON layout
+    const callToActionRes = await fetch(`http://localhost:3000/static/content/employerCallToAction.json`);
+    const callToActionJson = await callToActionRes.json();
     // Fetch posts from WorkAmerica blog
     const blogRes = await fetch(`https://blog.workamerica.co/wp-json/wp/v2/posts/?per_page=3`);
     const blogJson = await blogRes.json();
     // Add fetched data to props
     return {
+      landing: landingJson,
       benefits: benefitsJson.benefits,
       socialProof: socialProofJson.socialProof[randomEntry],
+      callToAction: callToActionJson,
       blogPosts: blogJson
     };
   }
@@ -31,13 +39,7 @@ export default class Home extends React.Component {
     return (
       <main>
         <PageLanding
-          title='Lorem ipsum dolor sit amet.'
-          introduction='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.'
-          mainCTA='Start your free trial!'
-          mainCTALink='/signup'
-          secondCTA='Learn more.'
-          secondCTALink='#'
-          landingImage='static/img/header.jpg'
+          source={this.props.landing}
         />
         <PageBenefits
           source={this.props.benefits}
@@ -46,12 +48,7 @@ export default class Home extends React.Component {
           source={this.props.socialProof}
         />
         <PageCallToAction
-          title='Lorem ipsum dolor sit amet.'
-          introduction='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.'
-          mainCTA='Start your free trial!'
-          mainCTALink='/signup'
-          secondCTA='Contact us.'
-          secondCTALink='/contact-us'
+          source={this.props.callToAction}
         />
         <PageBlogPosts
           source={this.props.blogPosts}
@@ -62,7 +59,9 @@ export default class Home extends React.Component {
 }
 
 Home.propTypes = {
+  landing: PropTypes.object,
   benefits: PropTypes.array,
   socialProof: PropTypes.object,
+  callToAction: PropTypes.object,
   blogPosts: PropTypes.array
 };
