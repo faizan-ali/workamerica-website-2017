@@ -1,4 +1,13 @@
 {
+  "landing": {
+    "title": "Lorem ipsum dolor sit amet.",
+    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
+    "mainCTA": "Start your free trial!",
+    "mainCTALink": "/signup",
+    "secondCTA": "Learn more.",
+    "secondCTALink": "#",
+    "landingImage": "static/img/header.jpg"
+  },
   "benefits": [
     {
       "title": "Find the certified candidates you're looking for.",
@@ -44,5 +53,27 @@
         }
       ]
     }
-  ]
+  ],
+  "socialProof": [
+    {
+      "quote": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”",
+      "quoteFrom": "George Clooney",
+      "quotePosition": "HR Manager at Nespresso",
+      "picture": "static/img/recruiter.jpg"
+    },
+    {
+      "quote": "“Hey hey hey ipsum dolor sit amet, consectetur adipiscing elit.”",
+      "quoteFrom": "Matt Damon",
+      "quotePosition": "Gorilla Trainer at Zoo",
+      "picture": "static/img/recruiter.jpg"
+    }
+  ],
+  "callToAction": {
+    "title": "Lorem ipsum dolor sit amet?",
+    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
+    "mainCTA": "Start your free trial!",
+    "mainCTALink": "/signup",
+    "secondCTA": "Learn more.",
+    "secondCTALink": "#"
+  }
 }

@@ -9,28 +9,19 @@ import PageBlogPosts from '../components/PageBlogPosts';
 
 export default class Home extends React.Component {
   static async getInitialProps () {
-    // Fetch Employer Landing JSON layout
-    const landingRes = await fetch(`http://localhost:3000/static/content/employerLanding.json`);
-    const landingJson = await landingRes.json();
-    // Fetch Employer Benefits JSON layout
-    const benefitsRes = await fetch(`http://localhost:3000/static/content/employerBenefits.json`);
-    const benefitsJson = await benefitsRes.json();
-    // Fetch Social Proof JSON layout
-    const socialProofRes = await fetch(`http://localhost:3000/static/content/employerSocialProof.json`);
-    const socialProofJson = await socialProofRes.json();
-    const randomEntry = Math.round(Math.random(socialProofJson.socialProof.length - 1));
-    // Fetch Employer Landing JSON layout
-    const callToActionRes = await fetch(`http://localhost:3000/static/content/employerCallToAction.json`);
-    const callToActionJson = await callToActionRes.json();
+    // Fetch Employer Page JSON layout
+    const employerRes = await fetch(`http://localhost:3000/static/content/employer.json`);
+    const employerJson = await employerRes.json();
+    const randomEntry = Math.round(Math.random(employerJson.socialProof.length - 1));
     // Fetch posts from WorkAmerica blog
     const blogRes = await fetch(`https://blog.workamerica.co/wp-json/wp/v2/posts/?per_page=3`);
     const blogJson = await blogRes.json();
     // Add fetched data to props
     return {
-      landing: landingJson,
-      benefits: benefitsJson.benefits,
-      socialProof: socialProofJson.socialProof[randomEntry],
-      callToAction: callToActionJson,
+      landing: employerJson.landing,
+      benefits: employerJson.benefits,
+      socialProof: employerJson.socialProof[randomEntry],
+      callToAction: employerJson.callToAction,
       blogPosts: blogJson
     };
   }
