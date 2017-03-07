@@ -34,9 +34,9 @@ const Navigation = () => {
               <i aria-hidden='true' className='fa fa-bars'></i>
             </a>
             <div className='dropdown-menu dropdown-menu-right'>
-              <button className='dropdown-item' type='button'>Employers</button>
-              <button className='dropdown-item' type='button'>Educators</button>
-              <button className='dropdown-item' type='button'>Job Seekers</button>
+              <Link href='/'><a><button className='dropdown-item' type='button'>Employers</button></a></Link>
+              <Link href='/educators'><a><button className='dropdown-item' type='button'>Educators</button></a></Link>
+              <Link href='/jobseekers'><a><button className='dropdown-item' type='button'>Job Seekers</button></a></Link>
             </div>
           </li>
         </ul>
