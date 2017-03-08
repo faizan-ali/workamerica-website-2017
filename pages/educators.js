@@ -6,7 +6,7 @@ import PageBenefits from '../components/PageBenefits';
 import PageSocial from '../components/PageSocial';
 import PageCallToAction from '../components/PageCallToAction';
 
-export default class Home extends React.Component {
+export default class Educators extends React.Component {
   static async getInitialProps () {
     // Fetch Employer Page JSON layout
     const educatorsRes = await fetch(`http://localhost:3000/static/content/educators.json`);
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
   }
 }
 
-Home.propTypes = {
+Educators.propTypes = {
   landing: PropTypes.object,
   benefits: PropTypes.array,
   socialProof: PropTypes.object,

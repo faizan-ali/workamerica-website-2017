@@ -19,13 +19,13 @@ const Navigation = () => {
         <img src='static/svg/logo.svg' alt='WorkAmerica' className='logo' />
         <ul className='nav navbar-nav hidden-sm-down flex-row'>
           <li className='nav-item' id='employers-nav'>
-            <Link href='/'><a className='nav-link'>Employers</a></Link>
+            <Link prefetch href='/'><a className='nav-link'>Employers</a></Link>
           </li>
           <li className='nav-item' id='educators-nav'>
-            <Link href='/educators'><a className='nav-link'>Educators</a></Link>
+            <Link prefetch href='/educators'><a className='nav-link'>Educators</a></Link>
           </li>
           <li className='nav-item' id='jobseekers-nav'>
-            <Link href='/jobseekers'><a className='nav-link'>Job Seekers</a></Link>
+            <Link prefetch href='/jobseekers'><a className='nav-link'>Job Seekers</a></Link>
           </li>
         </ul>
         <ul className='nav navbar-nav hidden-md-up'>
@@ -34,9 +34,9 @@ const Navigation = () => {
               <i aria-hidden='true' className='fa fa-bars'></i>
             </a>
             <div className='dropdown-menu dropdown-menu-right'>
-              <Link href='/'><a><button className='dropdown-item' type='button'>Employers</button></a></Link>
-              <Link href='/educators'><a><button className='dropdown-item' type='button'>Educators</button></a></Link>
-              <Link href='/jobseekers'><a><button className='dropdown-item' type='button'>Job Seekers</button></a></Link>
+              <Link prefetch href='/'><a><button className='dropdown-item' type='button'>Employers</button></a></Link>
+              <Link prefetch href='/educators'><a><button className='dropdown-item' type='button'>Educators</button></a></Link>
+              <Link prefetch href='/jobseekers'><a><button className='dropdown-item' type='button'>Job Seekers</button></a></Link>
             </div>
           </li>
         </ul>

@@ -1,0 +1,57 @@
+{
+  "landing": {
+    "title": "Hey jobseeker!",
+    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
+    "mainCTA": "Join now!",
+    "mainCTALink": "/contact-us",
+    "secondCTA": "Learn more.",
+    "secondCTALink": "#",
+    "landingImage": "static/img/header.jpg"
+  },
+  "benefits": [
+    {
+      "title": "Find the certified candidates you're looking for.",
+      "description": "Save time and source candidates faster by only reviewing trained and verified candidates, without having to dig through hundreds of unqualified resumes.",
+      "image": "static/img/search-certificates.gif",
+      "features": [
+        {
+          "featureTitle": "Feature 1",
+          "featureContent": "hey hey hey",
+          "featureImage": "static/img/feature.png"
+        },
+        {
+          "featureTitle": "Feature 2",
+          "featureContent": "hey hey hey",
+          "featureImage": "static/img/feature.png"
+        },
+        {
+          "featureTitle": "Feature 3",
+          "featureContent": "hey hey hey",
+          "featureImage": "static/img/feature.png"
+        }
+      ]
+    },
+    {
+      "title": "Source an untapped talent pool.",
+      "description": "Source an untapped talent pool that doesn't normally have a professional online presence. Source an untapped talent pool that doesn't normally have a professional online presence.",
+      "image": "static/img/skilled-trades-w.gif",
+      "features": [
+        {
+          "featureTitle": "Feature 1",
+          "featureContent": "hey hey hey",
+          "featureImage": "#"
+        },
+        {
+          "featureTitle": "Feature 2",
+          "featureContent": "hey hey hey",
+          "featureImage": "#"
+        },
+        {
+          "featureTitle": "Feature 3",
+          "featureContent": "hey hey hey",
+          "featureImage": "#"
+        }
+      ]
+    }
+  ]
+}

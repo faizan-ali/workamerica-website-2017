@@ -190,7 +190,7 @@ button {
 /********SECTION*********/
 /************************/
 
-.benefit-section, .cta-section, .blog-section  {
+.benefit-section, .cta-section, .blog-section, .blog-section  {
   padding: 6rem 0;
   border-bottom: .1rem solid #e6e6e6;
 }
@@ -210,11 +210,6 @@ button {
 .feature-image {
   border-radius: 50%;
   border: .2rem solid #2ba6f2;
-}
-
-.blog-section {
-  padding-bottom: 0;
-  border: none;
 }
 
 .social-section {
