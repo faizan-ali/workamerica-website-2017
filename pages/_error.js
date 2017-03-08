@@ -15,8 +15,8 @@ export default class Error extends React.Component {
             <img src='static/img/search-certificates.gif' width='300' />
           </div>
           <div className='col-md-6 p-4'>
-            <h2 className='pl-3'>We're very sorry, we can't seem to find this page.</h2>
-            <p className='pl-3'>Are you looking for qualified, trained and verified job candidates?</p>
+            <h2 className='pl-3'>Oops, we can't seem to find this page.</h2>
+            <p className='pl-3'>We're really good at finding qualified, trained and verified job candidates though!</p>
             <Link href='/'><button className='cta-primary'>Find out how we can help.</button></Link>
           </div>
         </div>
