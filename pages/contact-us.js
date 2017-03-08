@@ -37,20 +37,41 @@ export default class Error extends React.Component {
       });
       console.log(`send`);
     } else {
+      if (firstName.length <= 0) {
+        document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
+      }
+      if (lastName.length <= 0) {
+        document.querySelector(`input[name="lastName"]`).classList.add(`empty-field`);
+      }
+      if (email.length <= 0) {
+        document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
+      }
+      if (message.length <= 0) {
+        document.querySelector(`textarea[name="message"]`).classList.add(`empty-field`);
+      }
       this.setState({showErr: true});
     }
   }
 
   handleFirstNameChange = e => {
     this.setState({firstName: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
+    }
   }
 
   handleLastNameChange = e => {
     this.setState({lastName: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="lastName"]`).classList.add(`empty-field`);
+    }
   }
 
   handleEmailChange = e => {
     this.setState({email: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
+    }
   }
 
   handlePhoneChange = e => {
@@ -59,6 +80,9 @@ export default class Error extends React.Component {
 
   handleMessageChange = e => {
     this.setState({message: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`textarea[name="message"]`).classList.add(`empty-field`);
+    }
   }
 
   render () {
@@ -82,18 +106,18 @@ export default class Error extends React.Component {
               <div className='row col-xl-12'>
                 <div className='col-md-6 col-sm-12 pb-4'>
                   First Name*
-                  <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} />
+                  <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
                 </div>
                 <div className='col-md-6 col-sm-12 pb-4'>
                   Last Name*
-                  <input type='text' placeholder='Last Name' name='lastName' className='col-xl-12' value={this.state.lastName} onChange={this.handleLastNameChange} />
+                  <input type='text' placeholder='Last Name' name='lastName' className='col-xl-12' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
                 </div>
               </div>
 
               <div className='row col-xl-12'>
                 <div className='col-md-6 col-sm-12 pb-4'>
                   E-mail*
-                  <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} />
+                  <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
                 </div>
                 <div className='col-md-6 col-sm-12 pb-4'>
                   Phone Number
@@ -104,7 +128,7 @@ export default class Error extends React.Component {
               <div className='row col-xl-12'>
                 <div className='col-xl-12 pb-4'>
                   Message*
-                  <textarea placeholder='Message' name='message' className='col-xl-12 message' value={this.state.message} onChange={this.handleMessageChange} />
+                  <textarea placeholder='Message' name='message' className='col-xl-12 message' value={this.state.message} onChange={this.handleMessageChange} onBlur={this.handleMessageChange} />
                 </div>
               </div>
 
