@@ -31,7 +31,7 @@ export default class Error extends React.Component {
       form.append(`phone`, phone);
       form.append(`message`, message);
 
-      fetch(`/login`, {
+      fetch(`https://www.api.workamerica.co/contact/footer`, {
         method: `POST`,
         body: form
       });
@@ -100,8 +100,6 @@ export default class Error extends React.Component {
 
         <div className='row blog-section justify-content-center'>
           <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
-
-            {/* https://www.api.workamerica.co/contact/footer */}
 
               <div className='row col-xl-12'>
                 <div className='col-md-6 col-sm-12 pb-4'>
