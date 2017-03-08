@@ -131,6 +131,7 @@ button {
   margin-left: 3rem;
   font-weight: 600;
   font-size: 1.8rem;
+  border-bottom: .2rem solid #fff;
 
   &:hover {
     border-bottom: .2rem solid #2ba6f2;
@@ -365,6 +366,44 @@ button {
   background-color: rgba(255,255,255, 0.9);
   border-radius: .5rem;
   padding: 2rem 4rem !important;
+}
+
+/************************/
+/*****CONTACT US*********/
+/************************/
+
+.contact-us-section {
+  padding: 18rem 0 6rem 0;
+  background-color: #f4f7fb;
+  border-bottom: .1rem solid #e6e6e6;
+  background-image: url('../static/img/contact-us-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-form {
+  input, textarea {
+    border: .1rem solid #003050;
+    border-radius: .5rem;
+    padding: .7rem;
+    margin-top: .5rem;
+  }
+
+  .message {
+    height: 10rem;
+  }
+
+  .send {
+    margin: 0;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .error {
+    color: #ff0000;
+  }
 }
 
 
