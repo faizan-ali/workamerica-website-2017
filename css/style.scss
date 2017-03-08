@@ -342,6 +342,11 @@ button {
   margin-left: 1rem;
 }
 
+.error-message {
+  background-color: #fff;
+  border: none;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
