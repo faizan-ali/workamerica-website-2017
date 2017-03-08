@@ -18,13 +18,13 @@ const Navigation = () => {
       <nav className='col-sm-10 col-xl-9 d-flex align-items-center justify-content-between justify-content-md-start'>
         <img src='static/svg/logo.svg' alt='WorkAmerica' className='logo' />
         <ul className='nav navbar-nav hidden-sm-down flex-row'>
-          <li className='nav-item nav-active'>
+          <li className='nav-item' id='employers-nav'>
             <Link href='/'><a className='nav-link'>Employers</a></Link>
           </li>
-          <li className='nav-item'>
+          <li className='nav-item' id='educators-nav'>
             <Link href='/educators'><a className='nav-link'>Educators</a></Link>
           </li>
-          <li className='nav-item'>
+          <li className='nav-item' id='jobseekers-nav'>
             <Link href='/jobseekers'><a className='nav-link'>Job Seekers</a></Link>
           </li>
         </ul>
