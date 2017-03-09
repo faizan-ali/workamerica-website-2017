@@ -1,0 +1,75 @@
+import React from 'react';
+import fetch from 'isomorphic-fetch';
+
+import PageLanding from '../components/PageLanding';
+import PageBenefits from '../components/PageBenefits';
+import PageSocial from '../components/PageSocial';
+import PageCallToAction from '../components/PageCallToAction';
+import PageBlogPosts from '../components/PageBlogPosts';
+
+export default class Home extends React.Component {
+
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+
+    };
+  }
+
+  componentWillMount () {
+    // fetch page content
+    const dataUrl = `/static/content/employer.json`;
+    fetch(dataUrl)
+    .then(res => {
+      if (res.status >= 400) {
+        throw new Error(`Bad response from server`);
+      }
+      return res.json();
+    })
+    .then(data => {
+      const randomEntry = Math.round(Math.random(data.socialProof.length - 1));
+      this.setState({
+        landing: data.landing,
+        benefits: data.benefits,
+        socialProof: data.socialProof[randomEntry],
+        callToAction: data.callToAction,
+      });
+    });
+
+    // fetch blog posts
+    const blogUrl = `https://blog.workamerica.co/wp-json/wp/v2/posts/?per_page=3`;
+    fetch(blogUrl).then(res => {
+      if (res.status >= 400) {
+        throw new Error(`Bad response from server`);
+      }
+      return res.json();
+    })
+    .then(data => {
+      this.setState({
+        blogPosts: data
+      });
+    });
+  }
+
+  render() {
+    return (
+      <main>
+        <PageLanding
+          source={this.state.landing}
+        />
+        <PageBenefits
+          source={this.state.benefits}
+        />
+        <PageSocial
+          source={this.state.socialProof}
+        />
+        <PageCallToAction
+          source={this.state.callToAction}
+        />
+        <PageBlogPosts
+          source={this.state.blogPosts}
+        />
+    </main>
+    );
+  }
+}
