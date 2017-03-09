@@ -11,9 +11,13 @@ const PageCallToAction = ({source}) => {
             <p>
               {source.introduction}
             </p>
+            <div className='row col-md-12 justify-content-center'>
             <Link to={source.mainCTALink}><button className='cta-primary'>{source.mainCTA}</button></Link>
+            </div>
+            <div className='row col-md-12 justify-content-center'>
             {source.secondCTA ? <Link to={source.secondCTALink}><button className='cta-secondary'>{source.secondCTA}</button></Link> : ``}
-          </div>
+            </div>
+            </div>
         </div>
       </div>
     </section>

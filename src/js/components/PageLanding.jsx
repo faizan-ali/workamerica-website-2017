@@ -14,8 +14,13 @@ const PageLanding = ({source}) => {
             <p>
               {source.introduction}
             </p>
+            <div className='row col-xl-12'>
             <Link to={source.mainCTALink}><button className='cta-primary'>{source.mainCTA}</button></Link>
+            </div>
+            <div className='row col-xl-12'>
             {source.secondCTA ? <Link to={source.secondCTALink}><button className='cta-secondary'>{source.secondCTA}</button></Link> : ``}
+            </div>
+
           </div>
           <div className='col-md-6 d-flex p-4 align-items-center justify-content-center'>
           </div>
