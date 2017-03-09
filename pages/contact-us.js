@@ -1,4 +1,5 @@
 import React from 'react';
+import Recaptcha from 'react-recaptcha';
 //import Link from 'next/link';
 
 export default class Error extends React.Component {
@@ -15,14 +16,16 @@ export default class Error extends React.Component {
       email: ``,
       phone: ``,
       message: ``,
-      showErr: false
+      showErr: false,
+      showErrCaptcha: false,
+      noRobot: false
     };
   }
 
   handleSendMessage = () => {
-    const {firstName, lastName, email, phone, message} = this.state;
+    const {firstName, lastName, email, phone, message, noRobot} = this.state;
 
-    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && message.length !== 0) {
+    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && message.length !== 0 && noRobot) {
       const form = new FormData();
 
       form.append(`firstName`, firstName);
@@ -48,6 +51,9 @@ export default class Error extends React.Component {
       }
       if (message.length <= 0) {
         document.querySelector(`textarea[name="message"]`).classList.add(`empty-field`);
+      }
+      if (!noRobot) {
+        this.setState({showErrCaptcha: true});
       }
       this.setState({showErr: true});
     }
@@ -85,10 +91,18 @@ export default class Error extends React.Component {
     }
   }
 
+  handleRecaptcha = () => {
+    console.log(`Recaptcha loaded.`);
+  };
+
+  handleVerify = () => {
+    console.log(`I am not a robot.`);
+    this.setState({noRobot: true});
+  };
+
   render () {
     return (
       <section className='container-fluid'>
-
         <div className='row contact-us-section justify-content-center'>
           <div className='row col-sm-10 col-xl-7 align-items-center about-message'>
             <h1 className='row col-xl-12'>Contact us</h1>
@@ -132,7 +146,18 @@ export default class Error extends React.Component {
 
               <div className='row col-xl-12'>
                 <div className='col-xl-12 pb-4'>
+                  <Recaptcha
+                    sitekey='6Ld7QBgUAAAAAGbG7koI5ZKmNT6UFLg9DE5BR_tB'
+                    render='explicit'
+                    verifyCallback={this.handleVerify}
+                    onloadCallback={this.handleRecaptcha}
+                  />
+                </div>
+                <div className='col-xl-12 pb-4'>
               <button className='cta-primary send' onClick={this.handleSendMessage}>Send message</button>
+                </div>
+                <div className='col-xl-12 pb-4 error'>
+                  {this.state.showErrCaptcha ? `Please check the reCAPTCHA field.` : ``}
                 </div>
                 <div className='col-xl-12 pb-4 error'>
                   {this.state.showErr ? `Please fill in all required fields.` : ``}
