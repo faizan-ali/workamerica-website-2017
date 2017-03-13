@@ -9,6 +9,7 @@ const ExtractTextWebpackPlugin = require(`extract-text-webpack-plugin`);
 const configHtmls = require(`webpack-config-htmls`)();
 
 const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
+const S3Plugin = require(`webpack-s3-plugin`);
 
 // change for production build on different server path
 const publicPath = `/`;
@@ -28,7 +29,7 @@ const copy = new CopyWebpackPlugin([{
 });
 
 const config = {
-  
+
   // no HTML entry points for production build (bundled in JavaScript)
   entry: [
     require.resolve(`react-dev-utils/webpackHotDevClient`),
@@ -128,7 +129,7 @@ const config = {
 
 };
 
-if(process.env.NODE_ENV === `production`){
+if (process.env.NODE_ENV === `production`) {
 
   //remove hot reloading client
   config.entry.shift();
@@ -163,10 +164,26 @@ if(process.env.NODE_ENV === `production`){
     new UglifyJsPlugin({
       sourceMap: true, // false returns errors.. -p + plugin conflict
       comments: false
+    }),
+    new S3Plugin({
+      // Exclude uploading of html
+      exclude: /.*\.html$/,
+      // s3Options are required
+      s3Options: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        region: `us-west-1`
+      },
+      s3UploadOptions: {
+        Bucket: `MyBucket`
+      },
+      cdnizerOptions: {
+        defaultCDNBase: `http://asdf.ca`
+      }
     })
   ];
 
-}else{
+} else {
 
   // only include HTMLs in NODE_ENV=development
   // for Hot Reloading
