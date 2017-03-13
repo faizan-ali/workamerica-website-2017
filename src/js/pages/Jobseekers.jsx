@@ -5,6 +5,8 @@ import PageLanding from '../components/PageLanding';
 import PageBenefits from '../components/PageBenefits';
 import PageBlogPosts from '../components/PageBlogPosts';
 
+import Loading from '../components/Loading';
+
 export default class Jobseekers extends React.Component {
 
   constructor(props, context) {
@@ -28,7 +30,6 @@ export default class Jobseekers extends React.Component {
       this.setState({
         landing: data.landing,
         benefits: data.benefits,
-        callToAction: data.callToAction,
       });
     });
 
@@ -48,18 +49,25 @@ export default class Jobseekers extends React.Component {
   }
 
   render() {
-    return (
-      <main>
-        <PageLanding
-          source={this.state.landing}
-        />
-        <PageBlogPosts
-          source={this.state.blogPosts}
-        />
-        <PageBenefits
-          source={this.state.benefits}
-        />
-      </main>
-    );
+    const {landing, benefits, blogPosts} = this.state;
+    if (landing && benefits && blogPosts) {
+      return (
+        <main>
+          <PageLanding
+            source={landing}
+          />
+          <PageBlogPosts
+            source={blogPosts}
+          />
+          <PageBenefits
+            source={benefits}
+          />
+        </main>
+      );
+    } else {
+      return (
+        <Loading />
+      );
+    }
   }
 }

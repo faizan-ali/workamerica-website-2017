@@ -7,6 +7,8 @@ import PageSocial from '../components/PageSocial';
 import PageCallToAction from '../components/PageCallToAction';
 import PageBlogPosts from '../components/PageBlogPosts';
 
+import Loading from '../components/Loading';
+
 export default class Home extends React.Component {
 
   constructor(props, context) {
@@ -52,24 +54,31 @@ export default class Home extends React.Component {
   }
 
   render() {
-    return (
-      <main>
-        <PageLanding
-          source={this.state.landing}
-        />
-        <PageBenefits
-          source={this.state.benefits}
-        />
-        <PageSocial
-          source={this.state.socialProof}
-        />
-        <PageCallToAction
-          source={this.state.callToAction}
-        />
-        <PageBlogPosts
-          source={this.state.blogPosts}
-        />
-    </main>
-    );
+    const {landing, benefits, socialProof, callToAction, blogPosts} = this.state;
+    if (landing && benefits && socialProof && callToAction && blogPosts) {
+      return (
+        <main>
+          <PageLanding
+            source={landing}
+          />
+          <PageBenefits
+            source={benefits}
+          />
+          <PageSocial
+            source={socialProof}
+          />
+          <PageCallToAction
+            source={callToAction}
+          />
+          <PageBlogPosts
+            source={blogPosts}
+          />
+        </main>
+      );
+    } else {
+      return (
+        <Loading />
+      );
+    }
   }
 }

@@ -6,6 +6,8 @@ import PageBenefits from '../components/PageBenefits';
 import PageSocial from '../components/PageSocial';
 import PageCallToAction from '../components/PageCallToAction';
 
+import Loading from '../components/Loading';
+
 export default class Educators extends React.Component {
 
   constructor(props, context) {
@@ -37,21 +39,28 @@ export default class Educators extends React.Component {
   }
 
   render() {
-    return (
-      <main>
-        <PageLanding
-          source={this.state.landing}
-        />
-        <PageBenefits
-          source={this.state.benefits}
-        />
-        <PageSocial
-          source={this.state.socialProof}
-        />
-        <PageCallToAction
-          source={this.state.callToAction}
-        />
-    </main>
-    );
+    const {landing, benefits, socialProof, callToAction} = this.state;
+    if (landing && benefits && socialProof && callToAction) {
+      return (
+        <main>
+          <PageLanding
+            source={landing}
+          />
+          <PageBenefits
+            source={benefits}
+          />
+          <PageSocial
+            source={socialProof}
+          />
+          <PageCallToAction
+            source={callToAction}
+          />
+      </main>
+      );
+    } else {
+      return (
+        <Loading />
+      );
+    }
   }
 }
