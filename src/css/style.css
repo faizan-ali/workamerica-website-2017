@@ -141,15 +141,54 @@ button {
   border-bottom: .2rem solid #2ba6f2;
 }
 
-.dropdown-item {
-  font-size: 1.8rem;
-  padding: 2rem;
-}
-
 .fixed-navigation {
   position: fixed;
   width: 100%;
   z-index: 3;
+}
+
+.mobile-header {
+  background: linear-gradient(0deg, white, #f4f4f4);
+  box-shadow: 0 .05rem .4rem .1rem rgba(0, 0, 0, .5);
+  padding: 2rem 4rem 2rem 4rem;
+  position: relative;
+  z-index: 5;
+
+  & .logo {
+    width: 100%;
+    margin: 0;
+  }
+
+  & i {
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+  }
+
+  & .active {
+    color: #2ba6f2;
+  }
+}
+
+.mobile-nav {
+  animation: mobilenav .5s;
+
+  & ul {
+    margin-bottom: 1.5rem;
+    background-color: rgba(255,255,255, .9);
+  }
+
+  & ul li {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+
+  & ul li a {
+    color: #2ba6f2;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
 
 /************************/

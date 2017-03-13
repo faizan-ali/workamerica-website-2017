@@ -1,7 +1,7 @@
 import React from 'react';
 import Recaptcha from 'react-recaptcha';
 
-export default class Error extends React.Component {
+export default class ContactUs extends React.Component {
 
   constructor(props) {
     super(props);
