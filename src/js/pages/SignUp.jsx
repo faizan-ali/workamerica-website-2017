@@ -59,12 +59,18 @@ export default class SignUp extends React.Component {
     if (e.target.value.length <= 0) {
       document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
     }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="firstName"]`).classList.remove(`empty-field`);
+    }
   }
 
   handleLastNameChange = e => {
     this.setState({lastName: e.target.value});
     if (e.target.value.length <= 0) {
       document.querySelector(`input[name="lastName"]`).classList.add(`empty-field`);
+    }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="lastName"]`).classList.remove(`empty-field`);
     }
   }
 
@@ -73,6 +79,9 @@ export default class SignUp extends React.Component {
     if (e.target.value.length <= 0) {
       document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
     }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="email"]`).classList.remove(`empty-field`);
+    }
   }
 
   handlePhoneChange = e => {
@@ -80,12 +89,18 @@ export default class SignUp extends React.Component {
     if (e.target.value.length <= 0) {
       document.querySelector(`input[name="phone"]`).classList.add(`empty-field`);
     }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="phone"]`).classList.remove(`empty-field`);
+    }
   }
 
   handleCompanyChange = e => {
     this.setState({company: e.target.value});
     if (e.target.value.length <= 0) {
       document.querySelector(`input[name="company"]`).classList.add(`empty-field`);
+    }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="company"]`).classList.remove(`empty-field`);
     }
   }
 
