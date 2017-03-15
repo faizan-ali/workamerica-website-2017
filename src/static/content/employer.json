@@ -1,6 +1,6 @@
 {
   "landing": {
-    "title": "Hey employer!",
+    "title": "Goodmornin!.",
     "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
     "mainCTA": "Start your free trial!",
     "mainCTALink": "/signup",
@@ -10,45 +10,72 @@
   },
   "benefits": [
     {
-      "title": "Find the certified candidates you're looking for.",
-      "description": "Save time and source candidates faster by only reviewing trained and verified candidates, without having to dig through hundreds of unqualified resumes.",
+      "title": "Quickly Recruit Skilled Candidates",
+      "description": "Save time and find that perfect candidate faster by only reviewing trained and verified job seekers for your skills-based openings, without having to dig through hundreds of unqualified resumes.",
       "image": "static/img/search-certificates.gif",
       "features": [
         {
-          "featureTitle": "Feature 1",
-          "featureContent": "hey hey hey",
+          "featureTitle": "Exclusively for Verified Workers",
+          "featureContent": "We only allow students or graduates of our partner schools to create profiles on WorkAmerica to ensure that our job seekers are completing verified training programs and earning industry-recognized credentials.",
           "featureImage": "static/img/feature.png"
         },
         {
-          "featureTitle": "Feature 2",
-          "featureContent": "hey hey hey",
+          "featureTitle": "Post Jobs or Search Profiles",
+          "featureContent": "Short on Bandwidth? Post your job opening to our thousands of skilled verified candidates, and have them apply to you. Need a candidate yesterday? Search through our rich pool of their graduate and alumni profiles to find the perfect matches, along with their direct contact information to start calling candidates immediately.",
           "featureImage": "static/img/feature.png"
         },
         {
-          "featureTitle": "Feature 3",
-          "featureContent": "hey hey hey",
+          "featureTitle": "Mass Message Prospects",
+          "featureContent": "Simultaneously batch text and email active job seekers and passive prospects to start the conversation.",
+          "featureImage": "static/img/feature.png"
+        },
+        {
+          "featureTitle": "Track and Export Your Recruiting Funnel",
+          "featureContent": "Track candidates as they move through your hiring process in our lightweight ATS, or CSV export them to the tools you already use.",
           "featureImage": "static/img/feature.png"
         }
       ]
     },
     {
-      "title": "Source an untapped talent pool.",
-      "description": "Source an untapped talent pool that doesn't normally have a professional online presence. Source an untapped talent pool that doesn't normally have a professional online presence.",
+      "title": "Source From Untapped Talent Pools",
+      "description": "On WorkAmerica, you'll find candidates that aren’t on those other job boards, because we go straight to the source: schools.",
       "image": "static/img/skilled-trades-w.gif",
       "features": [
         {
-          "featureTitle": "Feature 1",
-          "featureContent": "hey hey hey",
+          "featureTitle": "Immediately Expand your Recruiting Network",
+          "featureContent": "Connect to verified talent from community colleges, technical colleges, non-profit training centers, credentialing agencies, and more, without the pain of navigating school bureaucracies.",
           "featureImage": "#"
         },
         {
-          "featureTitle": "Feature 2",
-          "featureContent": "hey hey hey",
+          "featureTitle": "Identify Passive Talent",
+          "featureContent": "Identify and contact Alumni that have graduated and gained work experience in their field, making them perfect candidates for your middle and senior level positions",
           "featureImage": "#"
         },
         {
           "featureTitle": "Feature 3",
           "featureContent": "hey hey hey",
+          "featureImage": "#"
+        }
+      ]
+    },
+    {
+      "title": "Build Your Talent Pipeline",
+      "description": "Build a strong talent pipeline for your company with high quality skilled talent to ensure your long-term competitive advantage.",
+      "image": "static/img/skilled-trades-w.gif",
+      "features": [
+        {
+          "featureTitle": "Stay Ahead of the Recruiting Curve",
+          "featureContent": "Connect with students before they hit the job market by knowing their graduation date and being the first to reach out",
+          "featureImage": "#"
+        },
+        {
+          "featureTitle": "Find Rising Skilled Talent",
+          "featureContent": "Hire students currently in school for apprenticeships, clinicals, internships, and more, to build up your workforce of the future.",
+          "featureImage": "#"
+        },
+        {
+          "featureTitle": "Connect with Local and Regional Schools",
+          "featureContent": "Form relationships with local community and technical colleges to ensure they train to your hiring needs.",
           "featureImage": "#"
         }
       ]
@@ -56,15 +83,9 @@
   ],
   "socialProof": [
     {
-      "quote": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”",
-      "quoteFrom": "George Clooney",
-      "quotePosition": "HR Manager at Nespresso",
-      "picture": "static/img/recruiter.jpg"
-    },
-    {
-      "quote": "“Hey hey hey ipsum dolor sit amet, consectetur adipiscing elit.”",
-      "quoteFrom": "Matt Damon",
-      "quotePosition": "Gorilla Trainer at Zoo",
+      "quote": "“WorkAmerica alleviates the uncertainty many businesses face in filling future workforce needs”",
+      "quoteFrom": "US Chamber of Commerce Foundation",
+      "quotePosition": "Talent Pipeline Whitepaper",
       "picture": "static/img/recruiter.jpg"
     }
   ],
