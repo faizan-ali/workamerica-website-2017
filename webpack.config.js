@@ -131,7 +131,6 @@ const config = {
 };
 
 if (process.env.NODE_ENV === `production`) {
-
   //remove hot reloading client
   config.entry.shift();
 
@@ -167,16 +166,14 @@ if (process.env.NODE_ENV === `production`) {
       comments: false
     }),
     new S3Plugin({
-      // Exclude uploading of html
-      exclude: /.*\.html$/,
       // s3Options are required
       s3Options: {
         accessKeyId: credentials.accessKeyId,
         secretAccessKey: credentials.secretKey,
-        region: `us-east-1`
+        region: 'us-west-2'
       },
       s3UploadOptions: {
-        Bucket: `website-stage.workamerica.co`
+        Bucket: 'website-stage.workamerica.co'
       }
     })
   ];
