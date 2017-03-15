@@ -1,5 +1,6 @@
 const path = require(`path`);
 
+const credentials = require('./credentials.json');
 const webpack = require(`webpack`);
 const {HotModuleReplacementPlugin} = webpack;
 const {UglifyJsPlugin} = webpack.optimize;
@@ -170,15 +171,12 @@ if (process.env.NODE_ENV === `production`) {
       exclude: /.*\.html$/,
       // s3Options are required
       s3Options: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        region: `us-west-1`
+        accessKeyId: credentials.accessKeyId,
+        secretAccessKey: credentials.secretKey,
+        region: `us-east-1`
       },
       s3UploadOptions: {
-        Bucket: `MyBucket`
-      },
-      cdnizerOptions: {
-        defaultCDNBase: `http://asdf.ca`
+        Bucket: `website-stage.workamerica.co`
       }
     })
   ];

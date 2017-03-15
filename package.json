@@ -40,7 +40,7 @@
     "stylelint": "^7.5.0",
     "stylelint-config-devine": "^1.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "latest",
+    "webpack": "^2.2.1",
     "webpack-config-htmls": "^1.0.1",
     "webpack-dev-server": "beta",
     "webpack-s3-plugin": "^0.9.2"
