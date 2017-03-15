@@ -1,6 +1,6 @@
 const path = require(`path`);
 
-const credentials = require('./credentials.json');
+const credentials = require(`./credentials.json`);
 const webpack = require(`webpack`);
 const {HotModuleReplacementPlugin} = webpack;
 const {UglifyJsPlugin} = webpack.optimize;
@@ -23,8 +23,8 @@ const port = 3000;
 // - fonts via WebFontLoader
 
 const copy = new CopyWebpackPlugin([{
-  from: `./src/assets`,
-  to: `assets`
+  from: `./src/static`,
+  to: `static`
 }], {
   ignore: [ `.DS_Store` ]
 });
@@ -170,10 +170,10 @@ if (process.env.NODE_ENV === `production`) {
       s3Options: {
         accessKeyId: credentials.accessKeyId,
         secretAccessKey: credentials.secretKey,
-        region: 'us-west-2'
+        region: `us-west-2`
       },
       s3UploadOptions: {
-        Bucket: 'website-stage.workamerica.co'
+        Bucket: `website-stage.workamerica.co`
       }
     })
   ];
