@@ -16,6 +16,10 @@ export default class Jobseekers extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/jobseekers.json`;

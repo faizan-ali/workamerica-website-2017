@@ -14,6 +14,10 @@ export default class SignUp extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleSendMessage = () => {
     const {firstName, lastName, email, phone, company, noRobot} = this.state;
 

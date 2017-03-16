@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AboutUs = () => {
+  window.scrollTo(0, 0);
   return (
     <section className='container-fluid'>
 

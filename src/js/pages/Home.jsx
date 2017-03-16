@@ -18,6 +18,10 @@ export default class Home extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/employer.json`;

@@ -17,6 +17,10 @@ export default class Educators extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/educators.json`;
