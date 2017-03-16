@@ -6,7 +6,7 @@ const FeatureItem = ({featureTitle, featureContent, featureImage}) => {
       <h2 className='row col-md-12 justify-content-start'>{featureTitle}</h2>
       <div className='row col-md-12 justify-content-center feature-image-container'>
         {featureImage === `` ? `` :
-          <img className='feature-image' src={featureImage} alt={featureTitle} width='200' height='200' />
+          <img className='feature-image' src={featureImage} alt={featureTitle} width='600' height='400' />
         }
       </div>
       <p className='row col-md-12 justify-content-center'>{featureContent}</p>

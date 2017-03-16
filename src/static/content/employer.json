@@ -17,17 +17,17 @@
         {
           "featureTitle": "Exclusively for Verified Workers",
           "featureContent": "We only allow students or graduates of our partner schools to create profiles on WorkAmerica to ensure that our job seekers are completing verified training programs and earning industry-recognized credentials.",
-          "featureImage": ""
+          "featureImage": "static/img/features/certificates.jpg"
         },
         {
           "featureTitle": "Post Jobs or Search Profiles",
           "featureContent": "Short on Bandwidth? Post your job opening to our thousands of skilled verified candidates, and have them apply to you. Need a candidate yesterday? Search through our rich pool of their graduate and alumni profiles to find the perfect matches, along with their direct contact information to start calling candidates immediately.",
-          "featureImage": ""
+          "featureImage": "static/img/features/search.jpg"
         },
         {
           "featureTitle": "Mass Message Prospects",
           "featureContent": "Simultaneously batch text and email active job seekers and passive prospects to start the conversation.",
-          "featureImage": ""
+          "featureImage": "static/img/features/bulk.jpg"
         }
       ]
     },
