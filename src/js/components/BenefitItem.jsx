@@ -22,11 +22,11 @@ export default class BenefitItem extends React.Component {
 
   render() {
     return (
-      <article className='row benefit-item'>
-        <div className='col-md-6 d-flex p-4 align-items-center justify-content-center mb-4'>
+      <article className='row benefit-item justify-content-center'>
+        <div className='col-md-5 d-flex p-4 align-items-center justify-content-center mb-4'>
           <img src={this.props.image} alt='certified candidates' width='250' />
         </div>
-        <div className='col-md-6 p-4 mb-4'>
+        <div className='col-md-5 p-4 mb-4'>
           <h2>{this.props.title}</h2>
           <p>
             {this.props.description}

@@ -17,22 +17,22 @@
         {
           "featureTitle": "Exclusively for Verified Workers",
           "featureContent": "We only allow students or graduates of our partner schools to create profiles on WorkAmerica to ensure that our job seekers are completing verified training programs and earning industry-recognized credentials.",
-          "featureImage": "static/img/feature.png"
+          "featureImage": ""
         },
         {
           "featureTitle": "Post Jobs or Search Profiles",
           "featureContent": "Short on Bandwidth? Post your job opening to our thousands of skilled verified candidates, and have them apply to you. Need a candidate yesterday? Search through our rich pool of their graduate and alumni profiles to find the perfect matches, along with their direct contact information to start calling candidates immediately.",
-          "featureImage": "static/img/feature.png"
+          "featureImage": ""
         },
         {
           "featureTitle": "Mass Message Prospects",
           "featureContent": "Simultaneously batch text and email active job seekers and passive prospects to start the conversation.",
-          "featureImage": "static/img/feature.png"
+          "featureImage": ""
         },
         {
           "featureTitle": "Track and Export Your Recruiting Funnel",
           "featureContent": "Track candidates as they move through your hiring process in our lightweight ATS, or CSV export them to the tools you already use.",
-          "featureImage": "static/img/feature.png"
+          "featureImage": ""
         }
       ]
     },
@@ -44,17 +44,12 @@
         {
           "featureTitle": "Immediately Expand your Recruiting Network",
           "featureContent": "Connect to verified talent from community colleges, technical colleges, non-profit training centers, credentialing agencies, and more, without the pain of navigating school bureaucracies.",
-          "featureImage": "#"
+          "featureImage": ""
         },
         {
           "featureTitle": "Identify Passive Talent",
           "featureContent": "Identify and contact Alumni that have graduated and gained work experience in their field, making them perfect candidates for your middle and senior level positions",
-          "featureImage": "#"
-        },
-        {
-          "featureTitle": "Feature 3",
-          "featureContent": "hey hey hey",
-          "featureImage": "#"
+          "featureImage": ""
         }
       ]
     },
@@ -66,17 +61,17 @@
         {
           "featureTitle": "Stay Ahead of the Recruiting Curve",
           "featureContent": "Connect with students before they hit the job market by knowing their graduation date and being the first to reach out",
-          "featureImage": "#"
+          "featureImage": ""
         },
         {
           "featureTitle": "Find Rising Skilled Talent",
           "featureContent": "Hire students currently in school for apprenticeships, clinicals, internships, and more, to build up your workforce of the future.",
-          "featureImage": "#"
+          "featureImage": ""
         },
         {
           "featureTitle": "Connect with Local and Regional Schools",
           "featureContent": "Form relationships with local community and technical colleges to ensure they train to your hiring needs.",
-          "featureImage": "#"
+          "featureImage": ""
         }
       ]
     }
