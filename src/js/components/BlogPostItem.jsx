@@ -18,7 +18,7 @@ const BlogPostItem = ({link, title, date}) => {
 BlogPostItem.propTypes = {
   link: PropTypes.string,
   title: PropTypes.object,
-  date: PropTypes.timestamp
+  date: PropTypes.string
 };
 
 BlogPostItem.defaultProps = {
