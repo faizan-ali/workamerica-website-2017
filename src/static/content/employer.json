@@ -28,11 +28,6 @@
           "featureTitle": "Mass Message Prospects",
           "featureContent": "Simultaneously batch text and email active job seekers and passive prospects to start the conversation.",
           "featureImage": ""
-        },
-        {
-          "featureTitle": "Track and Export Your Recruiting Funnel",
-          "featureContent": "Track candidates as they move through your hiring process in our lightweight ATS, or CSV export them to the tools you already use.",
-          "featureImage": ""
         }
       ]
     },
@@ -49,6 +44,11 @@
         {
           "featureTitle": "Identify Passive Talent",
           "featureContent": "Identify and contact Alumni that have graduated and gained work experience in their field, making them perfect candidates for your middle and senior level positions",
+          "featureImage": ""
+        },
+        {
+          "featureTitle": "Track and Export Your Recruiting Funnel",
+          "featureContent": "Track candidates as they move through your hiring process in our lightweight ATS, or CSV export them to the tools you already use.",
           "featureImage": ""
         }
       ]

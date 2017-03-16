@@ -242,6 +242,11 @@ button {
   animation: fadein 1s;
 }
 
+.features {
+  background-color: #F4F7FB;
+  border: .1rem solid #E6E6E6;
+}
+
 .feature-image-container {
   overflow: hidden;
 }

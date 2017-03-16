@@ -39,7 +39,7 @@ export default class BenefitItem extends React.Component {
           </span>
         </div>
         {this.state.displayFeatures ?
-          <div className='row col-md-12 p-4 mb-4 align-items-start justify-content-center enter'>
+          <div className='row col-md-12 p-4 mb-4 align-items-start justify-content-start enter features'>
             {this.props.features.map(f => <FeatureItem {...f}  key={Math.random(1000)} />)}
           </div> :
         ``}

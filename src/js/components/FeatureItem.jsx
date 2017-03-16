@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const FeatureItem = ({featureTitle, featureContent, featureImage}) => {
   return (
-    <article className='row col-md-4 p-4 mb-4 justify-content-center align-items-center'>
+    <article className='col-md-4 p-4 mb-4 justify-content-center align-items-center'>
       <h2 className='row col-md-12 justify-content-start'>{featureTitle}</h2>
       <div className='row col-md-12 justify-content-center feature-image-container'>
         {featureImage === `` ? `` :
