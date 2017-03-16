@@ -18,7 +18,7 @@ const PageLanding = ({source}) => {
             <Link to={source.mainCTALink}><button className='cta-primary'>{source.mainCTA}</button></Link>
             </div>
             <div className='row col-xl-12'>
-            {source.secondCTA ? <Link to={source.secondCTALink}><button className='cta-secondary'>{source.secondCTA}</button></Link> : ``}
+            {source.secondCTA ? <button className='cta-secondary' onClick={() => {document.querySelector(`#benefits`).scrollIntoView({block: `start`, behavior: `smooth`});}}>{source.secondCTA}</button> : ``}
             </div>
 
           </div>

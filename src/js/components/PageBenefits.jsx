@@ -4,7 +4,7 @@ import BenefitItem from './BenefitItem';
 
 const PageBenefits = ({source}) => {
   return (
-    <section className='container-fluid'>
+    <section className='container-fluid' id='benefits'>
       <div className='row benefit-section justify-content-center'>
         <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
           <div className='row col-lg-12 justify-content-center'>
