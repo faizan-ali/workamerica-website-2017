@@ -25,7 +25,7 @@ const Footer = () => {
           <div className='col-lg-6 col-sm-6 p-4'>
             <ul>
               <li>
-                <a href='http://blog.workamerica.com/' target='_blank'>Blog</a>
+                <a href='http://blog.workamerica.co/' target='_blank'>Blog</a>
               </li>
               <li>
                 <Link to='/about-us'>About us</Link>
