@@ -1,7 +1,7 @@
 {
   "landing": {
-    "title": "Goodmornin!.",
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
+    "title": "Connecting education to employment, exclusively for the skilled labor force.",
+    "introduction": "WorkAmerica connects job seekers, employers and educators for recruiting and hiring. We are on a mission to close the skills gap by connecting education to employment.",
     "mainCTA": "Start your free trial!",
     "mainCTALink": "/signup",
     "secondCTA": "Learn more.",
@@ -61,7 +61,7 @@
     {
       "title": "Build Your Talent Pipeline",
       "description": "Build a strong talent pipeline for your company with high quality skilled talent to ensure your long-term competitive advantage.",
-      "image": "static/img/skilled-trades-w.gif",
+      "image": "static/img/talent-pool.gif",
       "features": [
         {
           "featureTitle": "Stay Ahead of the Recruiting Curve",
