@@ -13,7 +13,8 @@ export default class ContactUs extends React.Component {
       message: ``,
       showErr: false,
       showErrCaptcha: false,
-      noRobot: false
+      noRobot: false,
+      complete: false
     };
   }
 
@@ -36,6 +37,9 @@ export default class ContactUs extends React.Component {
       fetch(`https://www.api.workamerica.co/contact/footer`, {
         method: `POST`,
         body: form
+      })
+      .then(() => {
+        this.setState({complete: true});
       });
       console.log(`send`);
     } else {
@@ -99,6 +103,64 @@ export default class ContactUs extends React.Component {
     this.setState({noRobot: true});
   };
 
+  renderForm() {
+    return (
+      <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
+        <div className='row col-xl-12'>
+          <div className='col-md-6 col-sm-12 pb-4'>
+            First Name*
+            <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
+          </div>
+          <div className='col-md-6 col-sm-12 pb-4'>
+            Last Name*
+            <input type='text' placeholder='Last Name' name='lastName' className='col-xl-12' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
+          </div>
+        </div>
+
+        <div className='row col-xl-12'>
+          <div className='col-md-6 col-sm-12 pb-4'>
+            E-mail*
+            <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
+          </div>
+          <div className='col-md-6 col-sm-12 pb-4'>
+            Phone Number
+            <input type='number' placeholder='Phone Number' name='phone' className='col-xl-12' value={this.state.phone} onChange={this.handlePhoneChange} />
+          </div>
+        </div>
+
+        <div className='row col-xl-12'>
+          <div className='col-xl-12 pb-4'>
+            Message*
+            <textarea placeholder='Message' name='message' className='col-xl-12 message' value={this.state.message} onChange={this.handleMessageChange} onBlur={this.handleMessageChange} />
+          </div>
+        </div>
+
+        <div className='row col-xl-12'>
+          <div className='col-xl-12 pb-4'>
+            <Recaptcha
+              sitekey='6Ld7QBgUAAAAAGbG7koI5ZKmNT6UFLg9DE5BR_tB'
+              render='explicit'
+              verifyCallback={this.handleVerify}
+              onloadCallback={this.handleRecaptcha}
+            />
+          </div>
+          <div className='col-xl-12 pb-4'>
+        <button className='cta-primary send' onClick={this.handleSendMessage}>Send message</button>
+          </div>
+          <div className='col-xl-12 pb-4 error'>
+            {this.state.showErrCaptcha ? `Please check the reCAPTCHA field.` : ``}
+          </div>
+          <div className='col-xl-12 pb-4 error'>
+            {this.state.showErr ? `Please fill in all required fields.` : ``}
+          </div>
+          <div className='col-xl-12 pb-4'>
+            * fields are required.
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render () {
     return (
       <section className='container-fluid'>
@@ -112,61 +174,13 @@ export default class ContactUs extends React.Component {
         </div>
 
         <div className='row blog-section justify-content-center'>
+          { !this.state.complete ?
+          this.renderForm()
+          :
           <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
-
-              <div className='row col-xl-12'>
-                <div className='col-md-6 col-sm-12 pb-4'>
-                  First Name*
-                  <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
-                </div>
-                <div className='col-md-6 col-sm-12 pb-4'>
-                  Last Name*
-                  <input type='text' placeholder='Last Name' name='lastName' className='col-xl-12' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
-                </div>
-              </div>
-
-              <div className='row col-xl-12'>
-                <div className='col-md-6 col-sm-12 pb-4'>
-                  E-mail*
-                  <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
-                </div>
-                <div className='col-md-6 col-sm-12 pb-4'>
-                  Phone Number
-                  <input type='number' placeholder='Phone Number' name='phone' className='col-xl-12' value={this.state.phone} onChange={this.handlePhoneChange} />
-                </div>
-              </div>
-
-              <div className='row col-xl-12'>
-                <div className='col-xl-12 pb-4'>
-                  Message*
-                  <textarea placeholder='Message' name='message' className='col-xl-12 message' value={this.state.message} onChange={this.handleMessageChange} onBlur={this.handleMessageChange} />
-                </div>
-              </div>
-
-              <div className='row col-xl-12'>
-                <div className='col-xl-12 pb-4'>
-                  <Recaptcha
-                    sitekey='6Ld7QBgUAAAAAGbG7koI5ZKmNT6UFLg9DE5BR_tB'
-                    render='explicit'
-                    verifyCallback={this.handleVerify}
-                    onloadCallback={this.handleRecaptcha}
-                  />
-                </div>
-                <div className='col-xl-12 pb-4'>
-              <button className='cta-primary send' onClick={this.handleSendMessage}>Send message</button>
-                </div>
-                <div className='col-xl-12 pb-4 error'>
-                  {this.state.showErrCaptcha ? `Please check the reCAPTCHA field.` : ``}
-                </div>
-                <div className='col-xl-12 pb-4 error'>
-                  {this.state.showErr ? `Please fill in all required fields.` : ``}
-                </div>
-                <div className='col-xl-12 pb-4'>
-                  * fields are required.
-                </div>
-              </div>
-
+            <p>We have received your message and will get back to you soon!</p>
           </div>
+          }
         </div>
 
       </section>

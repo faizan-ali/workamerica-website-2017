@@ -4,7 +4,20 @@ import MobileNav from '../components/MobileNav';
 import Footer from '../components/Footer';
 
 const App = props => {
+
   const {children} = props;
+
+  let userKeys = [];
+  const loveYourIntern = `38,38,40,40,37,39,37,39,66,65`;
+
+  document.onkeydown = function(e) {
+    userKeys.push(e.keyCode);
+
+    if (userKeys.toString().indexOf(loveYourIntern) >= 0) {
+      alert(`🌹 are red, violets are 💙, love your intern, he loves you too! 😘 xoxo Kevin, Spring 2017`);
+      userKeys = [];
+    }
+  };
 
   return (
     <div className='container-fluid p-0'>
