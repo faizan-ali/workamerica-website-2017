@@ -48,7 +48,7 @@ export default class Home extends React.Component {
     });
 
     // fetch blog posts
-    const blogUrl = `https://blog.workamerica.co/wp-json/wp/v2/posts/?per_page=3`;
+    const blogUrl = `https://blog.workamerica.co/wp-json/wp/v2/posts/?filter[category_name]=for-employers&per_page=3`;
     fetch(blogUrl).then(res => {
       if (res.status >= 400) {
         throw new Error(`Bad response from server`);
