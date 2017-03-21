@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-//import Link from 'next/link';
 
 import FeatureItem from './FeatureItem';
 
@@ -32,14 +31,14 @@ export default class BenefitItem extends React.Component {
             {this.props.description}
           </p>
           {this.props.features.length > 0 ?
-          <span className='learn-more' onClick={this.handleLearnMoreClick}>
-            {!this.state.displayFeatures ?
-            <span><i className='fa fa-plus-square-o' aria-hidden='true'></i> learn more</span>
-            :
-            <span><i className='fa fa-minus-square-o' aria-hidden='true'></i> see less</span>}
-          </span>
+            <span className='learn-more' onClick={this.handleLearnMoreClick}>
+              {!this.state.displayFeatures ?
+              <span><i className='fa fa-plus-square-o' aria-hidden='true'></i> learn more</span>
+              :
+              <span><i className='fa fa-minus-square-o' aria-hidden='true'></i> see less</span>}
+            </span>
           :
-          ``
+            ``
           }
 
         </div>
