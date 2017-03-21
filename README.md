@@ -18,3 +18,6 @@ Each section on the page has a dedicated object in the JSON file. You can't add 
 
 ### Broke something?
 Make sure you closed all double quotes and didn't forget any comma's.
+
+## Structure
+Each page is a collection of section components (ie. PageLanding, PageBenefits, PageSocial, etc.), we fetch the data from the JSON files on the pages and feed them to each component. Reorganizing content on each page is as easy as switching the order of the components on the page.
