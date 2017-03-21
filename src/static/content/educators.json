@@ -10,48 +10,32 @@
   },
   "benefits": [
     {
-      "title": "Find the certified candidates you're looking for.",
-      "description": "Save time and source candidates faster by only reviewing trained and verified candidates, without having to dig through hundreds of unqualified resumes.",
-      "image": "static/img/search-certificates.gif",
+      "title": "Track your students and alumni.",
+      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment and Perkins reporting.",
+      "image": "static/img/data.gif",
       "features": [
         {
-          "featureTitle": "Feature 1",
-          "featureContent": "hey hey hey",
-          "featureImage": "static/img/feature.png"
+          "featureTitle": "We pre-populate the profiles.",
+          "featureContent": "We partner with colleges to pre-populate student and graduate profiles on our platform, and we re-engage with the students digitally.",
+          "featureImage": ""
         },
         {
-          "featureTitle": "Feature 2",
-          "featureContent": "hey hey hey",
-          "featureImage": "static/img/feature.png"
+          "featureTitle": "Build employer relationships.",
+          "featureContent": "We help you establish and develop strong relationships with employers.",
+          "featureImage": ""
         },
         {
-          "featureTitle": "Feature 3",
-          "featureContent": "hey hey hey",
-          "featureImage": "static/img/feature.png"
+          "featureTitle": "A data driven approach.",
+          "featureContent": "We supplement your data driven approach to best practices in workforce development.",
+          "featureImage": ""
         }
       ]
     },
     {
-      "title": "Source an untapped talent pool.",
-      "description": "Source an untapped talent pool that doesn't normally have a professional online presence. Source an untapped talent pool that doesn't normally have a professional online presence.",
-      "image": "static/img/skilled-trades-w.gif",
-      "features": [
-        {
-          "featureTitle": "Feature 1",
-          "featureContent": "hey hey hey",
-          "featureImage": "#"
-        },
-        {
-          "featureTitle": "Feature 2",
-          "featureContent": "hey hey hey",
-          "featureImage": "#"
-        },
-        {
-          "featureTitle": "Feature 3",
-          "featureContent": "hey hey hey",
-          "featureImage": "#"
-        }
-      ]
+      "title": "Credentials.",
+      "description": "We market the relevance of your credentials to employers nationwide. We market the relevance of your credentials to employers nationwide.",
+      "image": "static/img/megaphone.gif",
+      "features": []
     }
   ],
   "socialProof": [

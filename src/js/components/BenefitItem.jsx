@@ -31,12 +31,17 @@ export default class BenefitItem extends React.Component {
           <p>
             {this.props.description}
           </p>
+          {this.props.features.length > 0 ?
           <span className='learn-more' onClick={this.handleLearnMoreClick}>
             {!this.state.displayFeatures ?
             <span><i className='fa fa-plus-square-o' aria-hidden='true'></i> learn more</span>
             :
             <span><i className='fa fa-minus-square-o' aria-hidden='true'></i> see less</span>}
           </span>
+          :
+          ``
+          }
+
         </div>
         {this.state.displayFeatures ?
           <div className='row col-md-12 p-4 mb-4 align-items-start justify-content-start enter features'>
