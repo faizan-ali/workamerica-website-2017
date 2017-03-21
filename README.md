@@ -1,4 +1,6 @@
 # WorkAmerica Website 2017
+Latest iteration of the WorkAmerica website at [www.workamerica.co](www.workamerica.co) built with React and React-Router.
+
 ## Installation
 ```
 npm install
