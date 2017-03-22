@@ -8,11 +8,14 @@ export default class Footer extends React.Component {
     super(props, context);
     this.state = {
       signedUp: false,
+      doingRequest: false,
       email: ``
     };
   }
 
   handleSignUp = () => {
+    this.setState({doingRequest: true});
+
     const form = new FormData();
     const {email} = this.state;
 
@@ -22,8 +25,10 @@ export default class Footer extends React.Component {
       method: `POST`,
       body: form
     })
-    .then(() => {
-      this.setState({signedUp: true});
+    .then(res => {
+      if (res.ok) {
+        this.setState({doingRequest: false, signedUp: true});
+      }
     });
   }
 
@@ -77,16 +82,29 @@ export default class Footer extends React.Component {
             <h2 className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>Stay up to date!</h2>
             <p className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>The best way to keep up with our progress? Sign up for Email Notifications.</p>
               {
-              !this.state.signedUp ?
-                <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
-                  <input type='email' placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
-                  <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
-                </div>
-              :
-              <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
-                <p className='green'>You are now signed up for the WorkAmerica newsletter!</p>
-              </div>
-            }
+                !this.state.signedUp && !this.state.doingRequest ?
+                  <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
+                    <input type='email' placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
+                    <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
+                  </div>
+                : ``
+              }
+              {
+                !this.state.signedUp && this.state.doingRequest ?
+                  <div className='col-md-12 justify-content-md-center pb-4'>
+                    <p>Adding {this.state.email} to our mailing list.</p>
+                  </div>
+                :
+                ``
+              }
+              {
+                this.state.signedUp && !this.state.doingRequest ?
+                  <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
+                    <p className='green'>You are now signed up for the WorkAmerica newsletter!</p>
+                  </div>
+                :
+                ``
+              }
           </div>
           <div className='row col-lg-3 col-md-12 col-sm-12 social-icons align-items-center justify-content-lg-end justify-content-md-center justify-content-sm-center'>
             <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='fa fa-linkedin-square' aria-hidden='true'></i></a>
