@@ -16,6 +16,7 @@ export default class ContactUs extends React.Component {
       showErr: false,
       showErrCaptcha: false,
       noRobot: false,
+      doingRequest: false,
       complete: false
     };
   }
@@ -37,12 +38,16 @@ export default class ContactUs extends React.Component {
       form.append(`phone`, phone);
       form.append(`message`, message);
 
+      this.setState({doingRequest: true});
+
       fetch(`http://api-stage.workamerica.co/website/contact`, {
         method: `POST`,
         body: form
       })
-      .then(() => {
-        this.setState({complete: true});
+      .then(res => {
+        if (res.ok) {
+          this.setState({doingRequest: false, complete: true});
+        }
       });
       console.log(`send`);
     } else {
@@ -199,12 +204,27 @@ export default class ContactUs extends React.Component {
         </div>
 
         <div className='row blog-section justify-content-center'>
-          { !this.state.complete ?
-          this.renderForm()
-          :
-          <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
-            <p>Thanks {this.state.firstName}, We have received your message and will get back to you soon!</p>
-          </div>
+          {
+            !this.state.complete && !this.state.doingRequest ?
+              this.renderForm()
+            :
+              ``
+          }
+          {
+            !this.state.complete && this.state.doingRequest ?
+              <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
+                <p>Hang on {this.state.firstName}, We are sending your message.</p>
+              </div>
+            :
+              ``
+          }
+          {
+            this.state.complete && !this.state.doingRequest ?
+              <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
+                <p className='green'>Thanks {this.state.firstName}, We have received your message and will get back to you soon!</p>
+              </div>
+            :
+              ``
           }
         </div>
 
