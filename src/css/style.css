@@ -374,6 +374,11 @@ button {
   padding-left: 1rem;
 }
 
+.newsletter-signup input:focus {
+  outline: none;
+  border-color: #2ba6f2;
+}
+
 .submit-newsletter {
   font-size: 1.8rem;
   width: 10%;

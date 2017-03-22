@@ -1,8 +1,8 @@
 {
   "landing": {
-    "title": "Hey jobseeker!",
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
-    "mainCTA": "Join now!",
+    "title": "Get recruited on the exclusive network for the skilled labor force.",
+    "introduction": "Have employers message you with job opportunities you qualify for. Our network is exclusively for students and grads of recent community and technical colleges in the US. Fill out our contact form to request to join.",
+    "mainCTA": "Request to join.",
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more.",
     "secondCTALink": "#",
@@ -18,6 +18,12 @@
     {
       "title": "Get contacted be employers, rather than you having to find and contact them.",
       "description": "Talk directly with recruiters and hiring managers via text, phone and email.",
+      "image": "static/img/search-certificates.gif",
+      "features": []
+    },
+    {
+      "title": "Minimize down time between school and work.",
+      "description": "Line up employment before you graduate, or get an internship, apprenticeship or clinical while still in school.",
       "image": "static/img/search-certificates.gif",
       "features": []
     }

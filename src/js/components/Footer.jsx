@@ -6,12 +6,34 @@ export default class Footer extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      signedUp: false
+      signedUp: false,
+      email: ``
     };
   }
 
   handleSignUp = () => {
-    this.setState({signedUp: true});
+    const form = new FormData();
+    const {email} = this.state;
+
+    form.append(`email`, email);
+
+    fetch(`http://api-stage.workamerica.co/newsletter`, {
+      method: `POST`,
+      body: form
+    })
+    .then(() => {
+      this.setState({signedUp: true});
+    });
+  }
+
+  handleEmailChange = e => {
+    this.setState({email: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
+    }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="email"]`).classList.remove(`empty-field`);
+    }
   }
 
   render() {
@@ -21,6 +43,7 @@ export default class Footer extends React.Component {
           <div className='row col-lg-5 col-sm-12'>
             <div className='row col-lg-12 pb-2'>
               <img src='static/svg/logo.svg' alt='WorkAmerica' className='logo' />
+              Connecting Education to Employment.
             </div>
             <div className='col-lg-6 col-sm-6 pt-4'>
               <ul>
@@ -51,11 +74,11 @@ export default class Footer extends React.Component {
           </div>
           <div className='row col-lg-4 newsletter-signup align-items-start justify-content-start'>
             <h2 className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>Stay up to date!</h2>
-            <p className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>The best way to keep up with our progress? Sign up for Email Notifications.</p>
               {
               !this.state.signedUp ?
                 <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
-                  <input type='text' placeholder='Email adress' />
+                  <input type='email' placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
                   <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
                 </div>
               :

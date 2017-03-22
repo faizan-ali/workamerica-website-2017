@@ -10,6 +10,7 @@ export default class SignUp extends React.Component {
       email: ``,
       phone: ``,
       company: ``,
+      password: ``,
       showErr: false
     };
   }
@@ -19,9 +20,9 @@ export default class SignUp extends React.Component {
   }
 
   handleSendMessage = () => {
-    const {firstName, lastName, email, phone, company, noRobot} = this.state;
+    const {firstName, lastName, email, phone, company, noRobot, password} = this.state;
 
-    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && company.length !== 0 && noRobot) {
+    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && company.length !== 0 && password.length !== 0 && noRobot) {
       const form = new FormData();
 
       form.append(`firstName`, firstName);
@@ -29,6 +30,7 @@ export default class SignUp extends React.Component {
       form.append(`email`, email);
       form.append(`phone`, phone);
       form.append(`company`, company);
+      form.append(`password`, password);
 
       fetch(`/`, {
         method: `POST`,
@@ -50,6 +52,9 @@ export default class SignUp extends React.Component {
       }
       if (company.length <= 0) {
         document.querySelector(`input[name="company"]`).classList.add(`empty-field`);
+      }
+      if (password.length <= 0) {
+        document.querySelector(`input[name="password"]`).classList.add(`empty-field`);
       }
       if (!noRobot) {
         this.setState({showErrCaptcha: true});
@@ -108,14 +113,24 @@ export default class SignUp extends React.Component {
     }
   }
 
+  handlePasswordChange = e => {
+    this.setState({password: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="password"]`).classList.add(`empty-field`);
+    }
+    if (e.target.value.length > 0) {
+      document.querySelector(`input[name="password"]`).classList.remove(`empty-field`);
+    }
+  }
+
   render () {
     return (
       <section className='container-fluid'>
         <div className='row signup-section justify-content-center'>
           <div className='col-lg-4 col-sm-10 align-items-center m-2'>
-            <h1 className='row col-xl-12'>Start your free trial</h1>
+            <h1 className='row col-xl-12'>3 Free Candidates To Get You Started</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.
+              See for yourself how easy it is to accomplish your sourcing and hiring needs on WorkAmerica. Run your first searches free, on us.
             </p>
           </div>
           <div className='col-lg-4 col-sm-10 align-items-center m-2 contact-form'>
@@ -138,6 +153,10 @@ export default class SignUp extends React.Component {
             <div className='col-sm-12 pb-4'>
               E-mail*
               <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
+            </div>
+            <div className='col-sm-12 pb-4'>
+              Password*
+              <input type='password' placeholder='Password' name='password' className='col-xl-12' value={this.state.password} onChange={this.handlePasswordChange} onBlur={this.handlePasswordChange} />
             </div>
             <div className='row col-xl-12'>
               <div className='col-xl-12 pb-4'>

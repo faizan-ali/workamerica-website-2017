@@ -1,8 +1,8 @@
 {
   "landing": {
-    "title": "Hey educator!",
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
-    "mainCTA": "Join now!",
+    "title": "Free Job Placement and Outcomes Data.",
+    "introduction": "WorkAmerica is a free platform that connects your students and grads to our network of employers, and provides you with Gainful Employment and Perkins data for free!",
+    "mainCTA": "Bring us to your campus.",
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more.",
     "secondCTALink": "#",
@@ -10,7 +10,7 @@
   },
   "benefits": [
     {
-      "title": "Track your students and alumni.",
+      "title": "Increase employment opportunities for your students and graduates",
       "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment and Perkins reporting.",
       "image": "static/img/data.gif",
       "features": [
@@ -32,7 +32,13 @@
       ]
     },
     {
-      "title": "Credentials.",
+      "title": "Track job placement outcomes",
+      "description": "We market the relevance of your credentials to employers nationwide. We market the relevance of your credentials to employers nationwide.",
+      "image": "static/img/megaphone.gif",
+      "features": []
+    },
+    {
+      "title": "Build and strengthen industry relationships",
       "description": "We market the relevance of your credentials to employers nationwide. We market the relevance of your credentials to employers nationwide.",
       "image": "static/img/megaphone.gif",
       "features": []
@@ -40,24 +46,24 @@
   ],
   "socialProof": [
     {
-      "quote": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”",
-      "quoteFrom": "George Clooney",
-      "quotePosition": "HR Manager at Nespresso",
+      "quote": "In over 50 campuses Nationwide",
+      "quoteFrom": "",
+      "quotePosition": "",
       "picture": "static/img/recruiter.jpg"
     },
     {
-      "quote": "“Hey hey hey ipsum dolor sit amet, consectetur adipiscing elit.”",
-      "quoteFrom": "Matt Damon",
-      "quotePosition": "Gorilla Trainer at Zoo",
+      "quote": "In over 50 campuses Nationwide",
+      "quoteFrom": "",
+      "quotePosition": "",
       "picture": "static/img/recruiter.jpg"
     }
   ],
   "callToAction": {
-    "title": "Lorem ipsum dolor sit amet?",
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
-    "mainCTA": "Join now",
+    "title": "Curious about bringing WorkAmerica to your campus?",
+    "introduction": "Let's have a quick call to explore the opportunity. Remember that we are really truly 100% free to you and your students, and our onboarding takes a matter of minutes. ",
+    "mainCTA": "Schedule a Call",
     "mainCTALink": "/contact-us",
-    "secondCTA": "Learn more.",
+    "secondCTA": "",
     "secondCTALink": "#"
   }
 }

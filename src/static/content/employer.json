@@ -1,7 +1,7 @@
 {
   "landing": {
-    "title": "Connecting education to employment, exclusively for the skilled labor force.",
-    "introduction": "WorkAmerica connects job seekers, employers and educators for recruiting and hiring. We are on a mission to close the skills gap by connecting education to employment.",
+    "title": "Quickly source trained and credentialed talent.",
+    "introduction": "Find the right talent painlessly on our candidate sourcing platform, quality assured and exclusively for the skilled labor force.",
     "mainCTA": "Start your free trial!",
     "mainCTALink": "/signup",
     "secondCTA": "Learn more.",
@@ -85,11 +85,11 @@
     }
   ],
   "callToAction": {
-    "title": "Lorem ipsum dolor sit amet?",
-    "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.",
+    "title": "3 Free Candidates To Get You Started.",
+    "introduction": "See for yourself how easy it is to accomplish your sourcing and hiring needs on WorkAmerica. Run your first searches free, on us.",
     "mainCTA": "Start your free trial!",
     "mainCTALink": "/signup",
-    "secondCTA": "Learn more.",
-    "secondCTALink": "#"
+    "secondCTA": "Contact us.",
+    "secondCTALink": "/contact-us"
   }
 }
