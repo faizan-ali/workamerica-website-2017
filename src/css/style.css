@@ -450,6 +450,14 @@ button {
   margin-top: .5rem;
 }
 
+.contact-form select {
+  border: .1rem solid #003050;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  background: none;
+  height: 3.3rem;
+}
+
 .contact-form .message {
   height: 10rem;
 }

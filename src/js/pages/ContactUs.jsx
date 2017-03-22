@@ -1,5 +1,6 @@
 import React from 'react';
 import Recaptcha from 'react-recaptcha';
+import fetch from 'isomorphic-fetch';
 
 export default class ContactUs extends React.Component {
 
@@ -11,6 +12,7 @@ export default class ContactUs extends React.Component {
       email: ``,
       phone: ``,
       message: ``,
+      title: ``,
       showErr: false,
       showErrCaptcha: false,
       noRobot: false,
@@ -23,18 +25,19 @@ export default class ContactUs extends React.Component {
   }
 
   handleSendMessage = () => {
-    const {firstName, lastName, email, phone, message, noRobot} = this.state;
+    const {title, firstName, lastName, email, phone, message, noRobot} = this.state;
 
-    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && message.length !== 0 && noRobot) {
+    if (title.length !== 0 && firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && message.length !== 0 && noRobot) {
       const form = new FormData();
 
+      form.append(`title`, title);
       form.append(`firstName`, firstName);
       form.append(`lastName`, lastName);
       form.append(`email`, email);
       form.append(`phone`, phone);
       form.append(`message`, message);
 
-      fetch(`https://www.api.workamerica.co/contact/footer`, {
+      fetch(`http://api-stage.workamerica.co/website/contact`, {
         method: `POST`,
         body: form
       })
@@ -43,6 +46,9 @@ export default class ContactUs extends React.Component {
       });
       console.log(`send`);
     } else {
+      if (title.length <= 0) {
+        document.querySelector(`select[name="title"]`).classList.add(`empty-field`);
+      }
       if (firstName.length <= 0) {
         document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
       }
@@ -83,6 +89,13 @@ export default class ContactUs extends React.Component {
     }
   }
 
+  handleTitleChange = e => {
+    this.setState({title: e.target.value});
+    if (e.target.value.length <= 0) {
+      document.querySelector(`input[name="title"]`).classList.add(`empty-field`);
+    }
+  }
+
   handlePhoneChange = e => {
     this.setState({phone: e.target.value});
   }
@@ -106,6 +119,18 @@ export default class ContactUs extends React.Component {
   renderForm() {
     return (
       <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
+        <div className='row col-xl-12'>
+          <div className='col-md-6 col-sm-12 pb-4'>
+            I am a*
+            <select name='title' className='col-xl-12' value={this.state.title} onChange={this.handleTitleChange} onBlur={this.handleTitleChange}>
+              <option value='Employer'>Employer</option>
+              <option value='Educator'>Educator</option>
+              <option value='Job Seeker'>Job Seeker</option>
+              <option value='Other'>Other</option>
+            </select>
+          </div>
+        </div>
+
         <div className='row col-xl-12'>
           <div className='col-md-6 col-sm-12 pb-4'>
             First Name*
@@ -168,7 +193,7 @@ export default class ContactUs extends React.Component {
           <div className='row col-sm-10 col-xl-7 align-items-center about-message'>
             <h1 className='row col-xl-12'>Contact us</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet erat leo. Suspendisse posuere elit augue, ut iaculis enim elementum sed. Phasellus ligula diam, fringilla non molestie sed, vulputate et odio.
+              We&#39;re excited to hear from you! Want to speak with us righ away? Give us a call at 877-750-2968.
             </p>
           </div>
         </div>
@@ -178,7 +203,7 @@ export default class ContactUs extends React.Component {
           this.renderForm()
           :
           <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center contact-form'>
-            <p>We have received your message and will get back to you soon!</p>
+            <p>Thanks {this.state.firstName}, We have received your message and will get back to you soon!</p>
           </div>
           }
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import fetch from 'isomorphic-fetch';
 
 export default class Footer extends React.Component {
 
@@ -17,7 +18,7 @@ export default class Footer extends React.Component {
 
     form.append(`email`, email);
 
-    fetch(`http://api-stage.workamerica.co/newsletter`, {
+    fetch(`http://api-stage.workamerica.co/website/newsletter`, {
       method: `POST`,
       body: form
     })
