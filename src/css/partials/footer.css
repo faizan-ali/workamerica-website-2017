@@ -1,0 +1,65 @@
+:root{
+  --light-blue: #2ba6f2;
+}
+
+.main-footer {
+  padding: 5rem 0;
+  margin-top: 5rem;
+  background: linear-gradient(0deg, white, #f4f4f4);
+  box-shadow: 0 -.05rem .4rem .1rem rgba(0, 0, 0, .5);
+}
+
+.main-footer ul {
+  line-height: 2;
+  font-size: 1.8rem;
+}
+
+.newsletter-signup {
+  line-height: 2;
+  font-size: 1.8rem;
+}
+
+.newsletter-signup h2, .newsletter-signup p {
+  margin-bottom: 0;
+  line-height: normal;
+}
+
+.newsletter-signup input {
+  width: 75%;
+  border: .2rem solid black;
+  border-radius: .5rem;
+  font-weight: 100;
+  padding-left: 1rem;
+}
+
+.newsletter-signup input:focus {
+  outline: none;
+  border-color: var(--light-blue);
+}
+
+.submit-newsletter {
+  font-size: 1.8rem;
+  width: 10%;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-radius: .5rem;
+  font-weight: 100;
+  height: 4.2rem;
+  padding: 0;
+  min-width: 4.2rem;
+  margin-left: .2rem;
+}
+
+.social-icons {
+  font-size: 3rem;
+}
+
+.social-icons i {
+  margin-left: 1rem;
+}
+
+.error-message {
+  background-color: #fff;
+  border: none;
+}

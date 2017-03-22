@@ -1,0 +1,43 @@
+.contact-us-section {
+  padding: 18rem 0 6rem 0;
+  background-color: #f4f7fb;
+  border-bottom: .1rem solid #e6e6e6;
+  background-image: url('/static/img/contact-us-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-form input, textarea {
+  border: .1rem solid #003050;
+  border-radius: .5rem;
+  padding: .7rem;
+  margin-top: .5rem;
+}
+
+.contact-form select {
+  border: .1rem solid #003050;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  background: none;
+  height: 3.3rem;
+}
+
+.contact-form .message {
+  height: 10rem;
+}
+
+.contact-form .send {
+  margin: 0;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.contact-form .error {
+  color: #ff0000;
+}
+
+.contact-form .empty-field {
+  border: .1rem solid #ff0000;
+}

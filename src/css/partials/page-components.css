@@ -1,0 +1,140 @@
+.landing-section {
+  padding: 18rem 0 6rem 0;
+  background-color: #f4f7fb;
+  border-bottom: .1rem solid #e6e6e6;
+}
+
+.intro-message {
+  background-color: white;
+  box-shadow: .05rem .05rem 1rem .1rem rgba(0, 0, 0, .1);
+  border-radius: .5rem;
+}
+
+.header-image {
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
+
+.parallax {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .header-image {
+    display: none;
+  }
+}
+
+.benefit-section, .cta-section, .blog-section, .blog-section  {
+  padding: 6rem 0;
+  border-bottom: .1rem solid #e6e6e6;
+}
+
+.benefit-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.enter {
+  animation: fadein 1s;
+}
+
+.features {
+  background-color: #F4F7FB;
+  border: .1rem solid #E6E6E6;
+}
+
+.feature-image-container {
+  overflow: hidden;
+}
+
+.feature-image {
+  max-width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+  border: .2rem solid #2ba6f2;
+}
+
+.social-section {
+  height: 40rem;
+  background: linear-gradient(0deg, #003050, #034b7a);
+  color: white;
+}
+
+.social-image-container {
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.social-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .social-image {
+    display: none;
+  }
+  .social-quote {
+    padding: 4rem !important;
+  }
+}
+
+.social-quote {
+  background: linear-gradient(0deg, #003050, #034b7a);
+}
+
+.social-quote p {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.social-quote p span {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.blog-article-site {
+  background: linear-gradient(0deg, #003050, #034b7a);
+  height: 30rem;
+  text-align: center;
+  color: white;
+  padding: 6rem;
+  transition: .5s;
+}
+
+.blog-article-site:hover {
+  border-bottom: 1rem solid #2ba6f2;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog-article-site h2 {
+  margin-bottom: 0;
+}
+
+.blog-article-site:nth-child(2){
+  border-left: .2rem solid white;
+  border-right: .2rem solid white;
+}
+
+.blogitem span {
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #2BA6F2;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-article-site:nth-child(2){
+    border: none;
+    border-bottom: .2rem solid white;
+    border-top: .2rem solid white;
+  }
+}
