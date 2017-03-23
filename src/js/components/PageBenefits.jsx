@@ -6,7 +6,7 @@ const PageBenefits = ({source}) => {
   return (
     <section className='container-fluid' id='benefits'>
       <div className='row benefit-section justify-content-center'>
-        <div className='row col-sm-10 col-xl-9 align-items-center justify-content-center'>
+        <div className='col-sm-10 col-xl-9 align-items-center justify-content-center'>
           <div className='row col-lg-12 justify-content-center'>
             <h1>What can WorkAmerica do for you?</h1>
           </div>
