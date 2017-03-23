@@ -18,6 +18,14 @@
   width: 60%;
 }
 
+.header-image-center {
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
 .parallax {
   width: 100%;
 }

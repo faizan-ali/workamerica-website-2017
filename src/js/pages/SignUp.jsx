@@ -49,7 +49,6 @@ export default class SignUp extends React.Component {
         return response.json();
       })
       .then(data => {
-        console.log(`Request succeeded with JSON response`, data);
         if (data.success) {
           window.location.href = data.misc;
         }

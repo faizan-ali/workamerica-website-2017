@@ -19,6 +19,11 @@ export default class Educators extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    document.querySelector(`#educators-nav`).classList.add(`nav-active`);
+  }
+
+  componentWillUnmount() {
+    document.querySelector(`#educators-nav`).classList.remove(`nav-active`);
   }
 
   componentWillMount () {
@@ -49,6 +54,7 @@ export default class Educators extends React.Component {
         <main>
           <PageLanding
             source={landing}
+            center={true}
           />
           <PageBenefits
             source={benefits}

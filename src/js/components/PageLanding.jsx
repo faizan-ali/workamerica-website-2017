@@ -1,13 +1,19 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-const PageLanding = ({source}) => {
+const PageLanding = ({source, center}) => {
   return (
     <section className='container-fluid'>
       <div className='row landing-section justify-content-center'>
-        <figure className='header-image'>
-          <img className='parallax' src={source.landingImage} />
-        </figure>
+        {center ?
+          <figure className='header-image-center d-flex justify-content-center align-items-center'>
+            <img className='parallax' src={source.landingImage} />
+          </figure>
+          :
+          <figure className='header-image'>
+            <img className='parallax' src={source.landingImage} />
+          </figure>
+        }
         <div className='row col-sm-10 col-xl-9 align-items-center'>
           <div className='col-md-6 p-4 intro-message'>
             <h1>{source.title}</h1>
@@ -32,10 +38,12 @@ const PageLanding = ({source}) => {
 
 PageLanding.propTypes = {
   source: PropTypes.object,
+  center: PropTypes.bool
 };
 
 PageLanding.defaultProps = {
   source: {},
+  center: false
 };
 
 export default PageLanding;

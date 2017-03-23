@@ -18,6 +18,11 @@ export default class Jobseekers extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    document.querySelector(`#jobseekers-nav`).classList.add(`nav-active`);
+  }
+
+  componentWillUnmount() {
+    document.querySelector(`#jobseekers-nav`).classList.remove(`nav-active`);
   }
 
   componentWillMount () {

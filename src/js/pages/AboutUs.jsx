@@ -31,7 +31,7 @@ const AboutUs = () => {
         <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
           <h1>Closing the Skills Gap with Big Data</h1>
           <p>
-            Using the data we will track around schools&#39; enrollment and placement outcomes, side by side with employers&#39; real time hiring needs, we&#39;ll uncover countless opportunites to better align industry needs with training opportunities. We&#39;ll bring educators and employers to the same table and enable them to take transformative action, substantiated by real, hard numbers.
+            Using data, WorkAmerica tracks school enrollment and placement outcomes. Side-by-side with employer&#39;s real-time hiring needs, WorkAmerica uncovers countless opportunities to better align insustry needs with training opportunities. We bring educators and employers to the same table and enable them to take transformative action substantiated by real hard numbers.
           </p>
         </div>
       </div>
@@ -40,22 +40,20 @@ const AboutUs = () => {
         <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
           <h1>Building the Future of Workforce Services </h1>
           <p>
-            As the job market changes increasingly more quickly, workers will need a whole new set of workforce services. These will range from skills retraining to career planning and flexible student aid, to yet un-imagined services. We envision a whole ecosystem of these wraparound services delivered to our country&#39;s workers, via the WorkAmerica platform.
+            As job market changes accelerate, workers will need a whole new set of work force services. These range from additional skills training to career planning, and flexible student aid to yet unimagined services.  WorkAmerica envisions a whole ecosystem of wraparound services delivered to the country&#39;s workers via our platform.
           </p>
         </div>
       </div>
 
-      <div className='row blog-section justify-content-center'>
-        <div className='col-sm-10 col-xl-3 align-items-center'>
+      <div className='row blog-section align-items-center justify-content-center'>
+        <div className='col-sm-10 col-xl-3 align-items-center contact-card p-0'>
           <img className='parallax' src='https://api.mapbox.com/v4/mapbox.streets/-77.043822,38.905398,16/600x400.png?access_token=pk.eyJ1Ijoia2V2aW5tZXl2YWVydCIsImEiOiJuVWVrX1lRIn0.wqOC7v6myrq5Iee63cBnnA' />
+          <p><br />1900 M St NW<br />Washington DC, 20006<br />877-750-2968<br />info@workamerica.co</p>
         </div>
-        <div className='col-sm-10 col-xl-5 align-items-start justify-content-center'>
-          <h1>At a Glance</h1>
+        <div className='col-sm-10 col-xl-5 align-items-start justify-content-center about-quote'>
+          <h1>&#34;The only way we really create change is to enter any situation with the humility to listen and to recognize the world as it is, and then the audacity to dream what it could be.&#34;</h1>
           <p>
-            CEO: <a href='http://www.linkedin.com/in/michaelcolonnese/' target='_blank'>Michael Colonnese</a><br />
-            Founded: 2013<br />
-            HQ: Washington, DC<br />
-            Supporters: Acumen, Kapor Capital, 500 startups and <a href='https://www.crunchbase.com/organization/workamerica' target='_blank'>others</a>.
+            Jacqueline Novogratz, CEO of Acumen
           </p>
         </div>
       </div>

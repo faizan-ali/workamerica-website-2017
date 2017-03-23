@@ -12,3 +12,16 @@
   border-radius: .5rem;
   padding: 2rem 4rem !important;
 }
+
+.contact-card {
+  background-color: #014470;
+
+  & p {
+    color: white;
+    text-align: center;
+  }
+}
+
+.about-quote {
+  padding: 5rem;
+}

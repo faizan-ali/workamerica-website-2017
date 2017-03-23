@@ -20,6 +20,11 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    document.querySelector(`#employers-nav`).classList.add(`nav-active`);
+  }
+
+  componentWillUnmount() {
+    document.querySelector(`#employers-nav`).classList.remove(`nav-active`);
   }
 
   componentWillMount () {
