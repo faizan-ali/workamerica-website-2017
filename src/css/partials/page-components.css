@@ -88,6 +88,10 @@
   background: linear-gradient(0deg, #003050, #034b7a);
 }
 
+.social-quote h1 {
+  font-size: 2.4rem;
+}
+
 .social-quote p {
   color: white !important;
   font-weight: 600;

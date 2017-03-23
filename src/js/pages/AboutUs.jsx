@@ -7,8 +7,8 @@ const AboutUs = () => {
 
       <div className='row about-us-section justify-content-center'>
         <div className='row col-sm-10 col-xl-7 align-items-center about-message'>
-          <h1 className='row col-xl-12'>Our Mission</h1>
-          <h2>To connect education to employment for our country&#39;s workforce. </h2>
+          <h1 className='row col-xl-12 justify-content-center'>Our Mission</h1>
+          <h2 className='row col-xl-12 justify-content-center'>To connect education to employment for our country&#39;s workforce. </h2>
           <p>
             At WorkAmerica, we are tackling the biggest social issue to face our generation: the future of work. In the face of multiple challenges, including the skills gap, automation, shifting demographics, and legislative uncertainty,  we are helping our country&#39;s workforce adapt to and prepare for the changing job market.
           </p>
@@ -32,6 +32,15 @@ const AboutUs = () => {
           <h1>Closing the Skills Gap with Big Data</h1>
           <p>
             Using the data we will track around schools&#39; enrollment and placement outcomes, side by side with employers&#39; real time hiring needs, we&#39;ll uncover countless opportunites to better align industry needs with training opportunities. We&#39;ll bring educators and employers to the same table and enable them to take transformative action, substantiated by real, hard numbers.
+          </p>
+        </div>
+      </div>
+
+      <div className='row blog-section justify-content-center'>
+        <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
+          <h1>Building the Future of Workforce Services </h1>
+          <p>
+            As the job market changes increasingly more quickly, workers will need a whole new set of workforce services. These will range from skills retraining to career planning and flexible student aid, to yet un-imagined services. We envision a whole ecosystem of these wraparound services delivered to our country&#39;s workers, via the WorkAmerica platform.
           </p>
         </div>
       </div>
