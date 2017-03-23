@@ -1,7 +1,7 @@
 {
   "landing": {
-    "title": "Get recruited on the exclusive network for the skilled labor force.",
-    "introduction": "Have employers message you with job opportunities you qualify for. Our network is exclusively for students and grads of recent community and technical colleges in the US. Fill out our contact form to request to join.",
+    "title": "Get recruited on the exclusive network for the skilled work force.",
+    "introduction": "Have employers message you with job opportunities you qualify for. Our network is exclusively for students and grads of recent community and technical colleges in the US. Fill out our contact form to request to join for free.",
     "mainCTA": "Request to join.",
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more.",
@@ -11,7 +11,7 @@
   "benefits": [
     {
       "title": "Get hired in the fields you trained for/take full advantage of your training and credentials.",
-      "description": "Join an exclusive network that only allows credentialed talent, so your profile doesn’t get lost amongst hundreds of others like on Indeed and monster.",
+      "description": "Join an exclusive network that only allows credentialed talent, so your profile doesn’t get lost amongst hundreds of others like on Indeed and Monster.",
       "image": "static/img/skilled-trades-w.gif",
       "features": []
     },

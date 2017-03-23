@@ -198,7 +198,7 @@ export default class ContactUs extends React.Component {
           <div className='row col-sm-10 col-xl-7 align-items-center about-message'>
             <h1 className='row col-xl-12'>Contact us</h1>
             <p>
-              We&#39;re excited to hear from you! Want to speak with us righ away? Give us a call at 877-750-2968.
+              We&#39;re excited to hear from you! Want to speak with us right away? Give us a call at 877-750-2968.
             </p>
           </div>
         </div>

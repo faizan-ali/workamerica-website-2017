@@ -34,7 +34,8 @@ export default class Home extends React.Component {
     })
     .then(data => {
       if (data.socialProof.length > 1) {
-        const randomEntry = Math.round(Math.random(data.socialProof.length - 1));
+        const randomEntry = Math.round(Math.random() * (data.socialProof.length - 1));
+        console.log(randomEntry);
         this.setState({socialProof: data.socialProof[randomEntry]});
       } else {
         this.setState({socialProof: data.socialProof[0]});

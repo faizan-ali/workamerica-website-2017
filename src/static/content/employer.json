@@ -1,7 +1,7 @@
 {
   "landing": {
     "title": "Quickly source trained and credentialed talent.",
-    "introduction": "Find the right talent painlessly on our candidate sourcing platform, quality assured and exclusively for the skilled labor force.",
+    "introduction": "Find the right talent painlessly on our candidate sourcing platform, quality assured and exclusively for the skilled workforce.",
     "mainCTA": "Start your free trial!",
     "mainCTALink": "/signup",
     "secondCTA": "Learn more.",
@@ -81,7 +81,19 @@
       "quote": "“WorkAmerica alleviates the uncertainty many businesses face in filling future workforce needs”",
       "quoteFrom": "US Chamber of Commerce Foundation",
       "quotePosition": "Talent Pipeline Whitepaper",
-      "picture": "static/img/recruiter.jpg"
+      "picture": "static/img/ftruck.jpg"
+    },
+    {
+      "quote": "“WorkAmerica alleviates the uncertainty many businesses face in filling future workforce needs”",
+      "quoteFrom": "US Chamber of Commerce Foundation",
+      "quotePosition": "Talent Pipeline Whitepaper",
+      "picture": "static/img/machinist.jpg"
+    },
+    {
+      "quote": "“WorkAmerica alleviates the uncertainty many businesses face in filling future workforce needs”",
+      "quoteFrom": "US Chamber of Commerce Foundation",
+      "quotePosition": "Talent Pipeline Whitepaper",
+      "picture": "static/img/fmachinist.jpg"
     }
   ],
   "callToAction": {

@@ -11,7 +11,7 @@
   "benefits": [
     {
       "title": "Increase employment opportunities for your students and graduates",
-      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment and Perkins reporting.",
+      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment and Perkins reporting and other reporting requirements.",
       "image": "static/img/data.gif",
       "features": [
         {
@@ -33,13 +33,13 @@
     },
     {
       "title": "Track job placement outcomes",
-      "description": "We market the relevance of your credentials to employers nationwide. We market the relevance of your credentials to employers nationwide.",
+      "description": "We market the relevance of your credentials to employers nationwide.",
       "image": "static/img/megaphone.gif",
       "features": []
     },
     {
       "title": "Build and strengthen industry relationships",
-      "description": "We market the relevance of your credentials to employers nationwide. We market the relevance of your credentials to employers nationwide.",
+      "description": "We market the relevance of your credentials to employers nationwide.",
       "image": "static/img/megaphone.gif",
       "features": []
     }
