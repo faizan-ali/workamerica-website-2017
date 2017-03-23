@@ -1,4 +1,4 @@
-:root{
+:root {
   --light-blue: #2ba6f2;
   --dark-blue: #014470;
 }
@@ -46,7 +46,7 @@
   margin-left: 3rem;
   font-weight: 600;
   font-size: 1.8rem;
-  border-bottom: .2rem solid #fff;
+  border-bottom: .2rem solid white;
 
   &:hover {
     border-bottom: .2rem solid var(--light-blue);
@@ -66,7 +66,7 @@
 .mobile-header {
   background: linear-gradient(0deg, white, #f4f4f4);
   box-shadow: 0 .05rem .4rem .1rem rgba(0, 0, 0, .5);
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 2rem 4rem;
   position: relative;
   z-index: 5;
 
@@ -91,7 +91,7 @@
 
   & ul {
     margin-bottom: 1.5rem;
-    background-color: rgba(255,255,255, .9);
+    background-color: rgba(255, 255, 255, .9);
   }
 
   & ul li {

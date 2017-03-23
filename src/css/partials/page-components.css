@@ -1,5 +1,5 @@
 .landing-section {
-  padding: 18rem 0 6rem 0;
+  padding: 18rem 0 6rem;
   background-color: #f4f7fb;
   border-bottom: .1rem solid #e6e6e6;
 }
@@ -23,12 +23,13 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .header-image {
     display: none;
   }
 }
 
-.benefit-section, .cta-section, .blog-section, .blog-section  {
+.benefit-section, .cta-section, .blog-section {
   padding: 6rem 0;
   border-bottom: .1rem solid #e6e6e6;
 }
@@ -42,8 +43,8 @@
 }
 
 .features {
-  background-color: #F4F7FB;
-  border: .1rem solid #E6E6E6;
+  background-color: #f4f7fb;
+  border: .1rem solid #e6e6e6;
 }
 
 .feature-image-container {
@@ -76,9 +77,11 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .social-image {
     display: none;
   }
+
   .social-quote {
     padding: 4rem !important;
   }
@@ -115,7 +118,7 @@
 .blog-article-site:hover {
   border-bottom: 1rem solid #2ba6f2;
   cursor: pointer;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -123,7 +126,7 @@
   margin-bottom: 0;
 }
 
-.blog-article-site:nth-child(2){
+.blog-article-site:nth-child(2) {
   border-left: .2rem solid white;
   border-right: .2rem solid white;
 }
@@ -132,11 +135,12 @@
   display: block;
   margin-top: 1rem;
   font-style: italic;
-  color: #2BA6F2;
+  color: #2ba6f2;
 }
 
 @media screen and (max-width: 767px) {
-  .blog-article-site:nth-child(2){
+
+  .blog-article-site:nth-child(2) {
     border: none;
     border-bottom: .2rem solid white;
     border-top: .2rem solid white;

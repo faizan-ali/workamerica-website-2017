@@ -1,14 +1,14 @@
 .about-us-section {
-  padding: 18rem 0 6rem 0;
+  padding: 18rem 0 6rem;
   background-color: #f4f7fb;
   border-bottom: .1rem solid #e6e6e6;
-  background-image: url('/static/img/about-us-bg.jpg');
+  background-image: url(/static/img/about-us-bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .about-message {
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255, 255, 255, .9);
   border-radius: .5rem;
   padding: 2rem 4rem !important;
 }
