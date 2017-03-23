@@ -1,6 +1,6 @@
 {
   "landing": {
-    "title": "Free Job Placement and Outcomes Data.",
+    "title": "Free job placement and outcomes data.",
     "introduction": "WorkAmerica is a free platform that connects your students and grads to our network of employers, and provides you with Gainful Employment and Perkins data for free!",
     "mainCTA": "Bring us to your campus.",
     "mainCTALink": "/contact-us",
@@ -46,16 +46,16 @@
   ],
   "socialProof": [
     {
-      "quote": "In over 50 campuses Nationwide",
+      "quote": "Join our growing network of education and training partners.",
       "quoteFrom": "",
       "quotePosition": "",
-      "picture": "static/img/recruiter.jpg"
+      "picture": "static/img/schools.png"
     },
     {
-      "quote": "In over 50 campuses Nationwide",
+      "quote": "Join our growing network of education and training partners.",
       "quoteFrom": "",
       "quotePosition": "",
-      "picture": "static/img/recruiter.jpg"
+      "picture": "static/img/schools.png"
     }
   ],
   "callToAction": {

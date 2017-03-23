@@ -60,11 +60,12 @@ export default class Jobseekers extends React.Component {
           <PageLanding
             source={landing}
           />
-          <PageBlogPosts
-            source={blogPosts}
-          />
           <PageBenefits
             source={benefits}
+          />
+          <PageBlogPosts
+            source={blogPosts}
+            end={true}
           />
         </main>
       );

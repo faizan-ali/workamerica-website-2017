@@ -12,7 +12,8 @@ export default class SignUp extends React.Component {
       phone: ``,
       company: ``,
       password: ``,
-      showErr: false
+      showErr: false,
+      existsErr: false
     };
   }
 
@@ -21,9 +22,9 @@ export default class SignUp extends React.Component {
   }
 
   handleSendMessage = () => {
-    const {firstName, lastName, email, phone, company, noRobot, password} = this.state;
+    const {firstName, lastName, email, phone, company, password} = this.state;
 
-    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && company.length !== 0 && password.length !== 0 && noRobot) {
+    if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && company.length !== 0 && password.length !== 0) {
       const form = new FormData();
 
       form.append(`firstName`, firstName);
@@ -33,11 +34,31 @@ export default class SignUp extends React.Component {
       form.append(`company`, company);
       form.append(`password`, password);
 
-      fetch(`/`, {
+      fetch(`http://api-stage.workamerica.co/website/employer`, {
         method: `POST`,
         body: form
+      })
+      .then(response => {
+        if (response.status >= 200 && response.status < 300) {
+          return Promise.resolve(response);
+        } else {
+          return Promise.reject(new Error(response.statusText));
+        }
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(`Request succeeded with JSON response`, data);
+        if (data.success) {
+          window.location.href = data.misc;
+        }
+        if (data.message === `exists`) {
+          this.setState({existsErr: true});
+        }
       });
-      console.log(`send`);
+
+
     } else {
       if (firstName.length <= 0) {
         document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
@@ -56,9 +77,6 @@ export default class SignUp extends React.Component {
       }
       if (password.length <= 0) {
         document.querySelector(`input[name="password"]`).classList.add(`empty-field`);
-      }
-      if (!noRobot) {
-        this.setState({showErrCaptcha: true});
       }
       this.setState({showErr: true});
     }
@@ -127,14 +145,14 @@ export default class SignUp extends React.Component {
   render () {
     return (
       <section className='container-fluid'>
-        <div className='row signup-section justify-content-center'>
-          <div className='col-lg-4 col-sm-10 align-items-center m-2'>
+        <div className='row signup-section justify-content-center align-items-start'>
+          <div className='col-lg-4 col-sm-10 m-2 overlay'>
             <h1 className='row col-xl-12'>3 Free Candidates To Get You Started</h1>
             <p>
               See for yourself how easy it is to accomplish your sourcing and hiring needs on WorkAmerica. Run your first searches free, on us.
             </p>
           </div>
-          <div className='col-lg-4 col-sm-10 align-items-center m-2 contact-form'>
+          <div className='col-lg-4 col-sm-10 align-items-center m-2 contact-form overlay'>
             <div className='col-sm-12 pb-4'>
               First Name*
               <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
@@ -165,6 +183,7 @@ export default class SignUp extends React.Component {
               </div>
               <div className='col-xl-12 pb-4 error'>
                 {this.state.showErr ? `Please fill in all required fields.` : ``}
+                {this.state.existsErr ? `An account already exists for ${this.state.email}` : ``}
               </div>
               <div className='col-xl-12 pb-4'>
                 * fields are required.

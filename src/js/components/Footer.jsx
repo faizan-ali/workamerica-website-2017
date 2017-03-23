@@ -78,12 +78,12 @@ export default class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div className='row col-lg-4 newsletter-signup align-items-start justify-content-start'>
+          <div className='row col-lg-4 newsletter-signup align-items-end justify-content-start'>
             <h2 className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>Stay up to date!</h2>
             <p className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>The best way to keep up with our progress? Sign up for Email Notifications.</p>
               {
                 !this.state.signedUp && !this.state.doingRequest ?
-                  <div className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>
+                  <div className='col-md-12 justify-content-md-center justify-content-lg-start'>
                     <input type='email' placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
                     <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
                   </div>
@@ -106,7 +106,7 @@ export default class Footer extends React.Component {
                 ``
               }
           </div>
-          <div className='row col-lg-3 col-md-12 col-sm-12 social-icons align-items-center justify-content-lg-end justify-content-md-center justify-content-sm-center'>
+          <div className='row col-lg-3 col-md-12 col-sm-12 social-icons align-items-end justify-content-lg-end justify-content-md-center justify-content-sm-center'>
             <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='fa fa-linkedin-square' aria-hidden='true'></i></a>
             <a href='https://www.facebook.com/workamerica.co/' target='_blank'><i className='fa fa-facebook-square' aria-hidden='true'></i></a>
             <a href='https://twitter.com/work_america' target='_blank'><i className='fa fa-twitter-square' aria-hidden='true'></i></a>

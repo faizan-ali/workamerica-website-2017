@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
           <h1>Giving the other half of America&#39;s job seekers a professional online presence.</h1>
           <p>
-            WorkAmerica gives skilled workers an online professional presence and recruitment marketplace long available to white collar professionals but never before designed for this demographic. And this demographic fills 55% of all job openings in America each year! This is the first step in fixing the broken education to employment pipeline.
+            WorkAmerica gives skilled workers an online professional presence and recruitment marketplace, long available to white collar professionals but, never before designed for this demographic. And this demographic fills 55% of all job openings in America each year! This is the first step in fixing the broken education-to-employment pipeline.
           </p>
         </div>
       </div>

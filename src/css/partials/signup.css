@@ -2,4 +2,12 @@
   padding: 18rem 0 6rem;
   background-color: #f4f7fb;
   border-bottom: .1rem solid #e6e6e6;
+  background: url(/static/img/signup.jpg);
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: .5rem;
+  padding: 2rem 4rem !important;
 }

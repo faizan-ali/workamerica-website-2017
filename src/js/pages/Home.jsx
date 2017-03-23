@@ -82,6 +82,7 @@ export default class Home extends React.Component {
           />
           <PageBlogPosts
             source={blogPosts}
+            end={true}
           />
         </main>
       );
