@@ -2,11 +2,11 @@
   "landing": {
     "title": "Get recruited on the exclusive network for the skilled work force.",
     "introduction": "Have employers message you with job opportunities you qualify for. Our network is exclusively for students and grads of recent community and technical colleges in the US. Fill out our contact form to request to join for free.",
-    "mainCTA": "Request to join.",
+    "mainCTA": "Request to join",
     "mainCTALink": "/contact-us",
-    "secondCTA": "Learn more.",
+    "secondCTA": "Learn more",
     "secondCTALink": "#",
-    "landingImage": "static/img/header.jpg"
+    "landingImage": "static/img/jobseeker.png"
   },
   "benefits": [
     {
@@ -24,7 +24,7 @@
     {
       "title": "Minimize down time between school and work.",
       "description": "Unlock your career potential. Line up employment before you graduate, or get an internship, apprenticeship or clinical while still in school.",
-      "image": "static/img/search-certificates.gif",
+      "image": "static/img/clock.gif",
       "features": []
     }
   ]

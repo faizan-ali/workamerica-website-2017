@@ -2,16 +2,16 @@
   "landing": {
     "title": "Free job placement and outcomes data.",
     "introduction": "WorkAmerica is a free platform that connects your students and grads to our network of employers, and provides you with Gainful Employment and Perkins data for free!",
-    "mainCTA": "Bring us to your campus.",
+    "mainCTA": "Bring us to your campus",
     "mainCTALink": "/contact-us",
-    "secondCTA": "Learn more.",
+    "secondCTA": "Learn more",
     "secondCTALink": "#",
     "landingImage": "static/img/hero-edu.png"
   },
   "benefits": [
     {
       "title": "Increase employment opportunities for your students and graduates",
-      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment and Perkins reporting and other reporting requirements.",
+      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment, Perkins and other reporting requirements.",
       "image": "static/img/data.gif",
       "features": [
         {
@@ -40,7 +40,7 @@
     {
       "title": "Build and strengthen industry relationships",
       "description": "We market the relevance of your credentials to employers nationwide.",
-      "image": "static/img/megaphone.gif",
+      "image": "static/img/shakehands.gif",
       "features": []
     }
   ],

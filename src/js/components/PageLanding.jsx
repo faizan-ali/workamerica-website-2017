@@ -15,7 +15,7 @@ const PageLanding = ({source, center}) => {
           </figure>
         }
         <div className='row col-sm-10 col-xl-9 align-items-center'>
-          <div className='col-md-6 p-4 intro-message'>
+          <div className='col-md-6 intro-message'>
             <h1>{source.title}</h1>
             <p>
               {source.introduction}

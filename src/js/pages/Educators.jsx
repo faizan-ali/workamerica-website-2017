@@ -37,11 +37,16 @@ export default class Educators extends React.Component {
       return res.json();
     })
     .then(data => {
-      const randomEntry = Math.round(Math.random(data.socialProof.length - 1));
+      if (data.socialProof.length > 1) {
+        const randomEntry = Math.round(Math.random() * (data.socialProof.length - 1));
+        console.log(randomEntry);
+        this.setState({socialProof: data.socialProof[randomEntry]});
+      } else {
+        this.setState({socialProof: data.socialProof[0]});
+      }
       this.setState({
         landing: data.landing,
         benefits: data.benefits,
-        socialProof: data.socialProof[randomEntry],
         callToAction: data.callToAction,
       });
     });

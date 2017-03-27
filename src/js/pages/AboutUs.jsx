@@ -40,20 +40,21 @@ const AboutUs = () => {
         <div className='row col-sm-10 col-xl-7 align-items-center justify-content-center'>
           <h1>Building the Future of Workforce Services </h1>
           <p>
-            As job market changes accelerate, workers will need a whole new set of work force services. These range from additional skills training to career planning, and flexible student aid to yet unimagined services.  WorkAmerica envisions a whole ecosystem of wraparound services delivered to the country&#39;s workers via our platform.
+            As job market changes accelerate, workers will need a whole new set of workforce services. These range from additional skills training to career planning, and flexible student aid to yet unimagined services. WorkAmerica envisions a whole ecosystem of wraparound services delivered to the country&#39;s workers via our platform.
           </p>
         </div>
       </div>
 
       <div className='row blog-section align-items-center justify-content-center'>
         <div className='col-sm-10 col-xl-3 align-items-center contact-card p-0'>
-          <img className='parallax' src='https://api.mapbox.com/v4/mapbox.streets/-77.043822,38.905398,16/600x400.png?access_token=pk.eyJ1Ijoia2V2aW5tZXl2YWVydCIsImEiOiJuVWVrX1lRIn0.wqOC7v6myrq5Iee63cBnnA' />
+          <img className='parallax' src='static/img/map.jpg' />
           <p><br />1900 M St NW<br />Washington DC, 20006<br />877-750-2968<br />info@workamerica.co</p>
         </div>
         <div className='col-sm-10 col-xl-5 align-items-start justify-content-center about-quote'>
           <h1>&#34;The only way we really create change is to enter any situation with the humility to listen and to recognize the world as it is, and then the audacity to dream what it could be.&#34;</h1>
           <p>
-            Jacqueline Novogratz, CEO of Acumen
+            Jacqueline Novogratz, CEO of Acumen<br />
+            Investor in WorkAmerica
           </p>
         </div>
       </div>
