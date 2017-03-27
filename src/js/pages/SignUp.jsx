@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
+import MaskedInput from 'react-maskedinput';
 
 export default class SignUp extends React.Component {
 
@@ -166,7 +167,7 @@ export default class SignUp extends React.Component {
             </div>
             <div className='col-sm-12 pb-4'>
               Phone Number*
-              <input type='tel' placeholder='Phone Number' name='phone' className='col-xl-12' value={this.state.phone} onChange={this.handlePhoneChange} onBlur={this.handlePhoneChange} />
+              <MaskedInput mask='(111) 111-1111' name='phone' size='10' value={this.state.phone} onChange={this.handlePhoneChange} onBlur={this.handlePhoneChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               E-mail*

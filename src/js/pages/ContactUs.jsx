@@ -1,6 +1,7 @@
 import React from 'react';
 import Recaptcha from 'react-recaptcha';
 import fetch from 'isomorphic-fetch';
+import MaskedInput from 'react-maskedinput';
 
 export default class ContactUs extends React.Component {
 
@@ -154,7 +155,7 @@ export default class ContactUs extends React.Component {
           </div>
           <div className='col-md-6 col-sm-12 pb-4'>
             Phone Number
-            <input type='tel' placeholder='Phone Number' name='phone' className='col-xl-12' value={this.state.phone} onChange={this.handlePhoneChange} />
+            <MaskedInput mask='(111) 111-1111' name='phone' size='10' value={this.state.phone} onChange={this.handlePhoneChange} />
           </div>
         </div>
 
