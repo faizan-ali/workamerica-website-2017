@@ -84,3 +84,7 @@ button {
 .green {
   color: #80c02c;
 }
+
+.error {
+  color: red;
+}

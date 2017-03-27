@@ -9,27 +9,32 @@ export default class Footer extends React.Component {
     this.state = {
       signedUp: false,
       doingRequest: false,
-      email: ``
+      email: ``,
+      errMsg: false
     };
   }
 
   handleSignUp = () => {
-    this.setState({doingRequest: true});
+    if (this.state.email.length > 0) {
+      this.setState({doingRequest: true, errMsg: false});
 
-    const form = new FormData();
-    const {email} = this.state;
+      const form = new FormData();
+      const {email} = this.state;
 
-    form.append(`email`, email);
+      form.append(`email`, email);
 
-    fetch(`http://api-stage.workamerica.co/website/newsletter`, {
-      method: `POST`,
-      body: form
-    })
-    .then(res => {
-      if (res.ok) {
-        this.setState({doingRequest: false, signedUp: true});
-      }
-    });
+      fetch(`http://api-stage.workamerica.co/website/newsletter`, {
+        method: `POST`,
+        body: form
+      })
+      .then(res => {
+        if (res.ok) {
+          this.setState({doingRequest: false, signedUp: true});
+        }
+      });
+    } else {
+      this.setState({errMsg: true});
+    }
   }
 
   handleEmailChange = e => {
@@ -86,13 +91,14 @@ export default class Footer extends React.Component {
                   <div className='col-md-12 justify-content-md-center justify-content-lg-start'>
                     <input type='email' required placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
                     <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
+                    {this.state.errMsg ? <p className='error'>Please enter your email address.</p> : ``}
                   </div>
                 : ``
               }
               {
                 !this.state.signedUp && this.state.doingRequest ?
                   <div className='col-md-12 justify-content-md-center pb-4'>
-                    <p>Adding {this.state.email} to our mailing list.</p>
+                    <p className='green'>Adding {this.state.email} to our mailing list.</p>
                   </div>
                 :
                 ``
