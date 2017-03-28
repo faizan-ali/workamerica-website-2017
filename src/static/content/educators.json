@@ -1,7 +1,7 @@
 {
   "landing": {
     "title": "Free job placement and outcomes data.",
-    "introduction": "WorkAmerica is a free platform that connects your students and grads to our network of employers, and provides you with Gainful Employment and Perkins data for free!",
+    "introduction": "WorkAmerica is a free platform that connects your students and grads to our network of employers, and provides you with Gainful Employment, Perkins, and other reporting data for free!",
     "mainCTA": "Bring us to your campus",
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more",
@@ -11,21 +11,21 @@
   "benefits": [
     {
       "title": "Increase employment opportunities for your students and graduates",
-      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment, Perkins and other reporting requirements.",
+      "description": "Our platform gives employers easy access to message, recruit, and hire your students and graduates. This increases the number of employment opportunities your students are offered, and opens them up to more employment opportunities that take full advantage of the training and credentials they've pursued.",
       "image": "static/img/data.gif",
       "features": [
         {
-          "featureTitle": "We pre-populate the profiles.",
-          "featureContent": "We partner with colleges to pre-populate student and graduate profiles on our platform, and we re-engage with the students digitally.",
+          "featureTitle": "Market your training programs and students to employers",
+          "featureContent": "Our platform is designed for employers to discover the training programs you offer, and take advantage of the trained and qualified students your institution produces.",
           "featureImage": ""
         },
         {
-          "featureTitle": "Build employer relationships.",
-          "featureContent": "We help you establish and develop strong relationships with employers.",
+          "featureTitle": "Connect your students to local, regional and national employers.",
+          "featureContent": "Our employers are ",
           "featureImage": ""
         },
         {
-          "featureTitle": "A data driven approach.",
+          "featureTitle": "Highlight your industry-recognized credentials",
           "featureContent": "We supplement your data driven approach to best practices in workforce development.",
           "featureImage": ""
         }
@@ -33,13 +33,29 @@
     },
     {
       "title": "Track job placement outcomes",
-      "description": "We market the relevance of your credentials to employers nationwide.",
+      "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment, Perkins and other reporting requirements.",
       "image": "static/img/megaphone.gif",
-      "features": []
+      "features": [
+        {
+          "featureTitle": "Collect relevant placement data",
+          "featureContent": "Start date, starting salary, job title, etc... We know what data you need, and collect as much of that information as we can for each of our placements, and share this data with you.",
+          "featureImage": ""
+        },
+        {
+          "featureTitle": "Access data in your own dashboard (Coming Soon)",
+          "featureContent": "As a partner institution, you'll be able to log in and access the placement data we collect, on your own time.",
+          "featureImage": ""
+        },
+        {
+          "featureTitle": "Track students' progress through recruiring and hiring funnels in real time (Coming Soon)",
+          "featureContent": "Get realtime alerts as students are scheduled for phone calls with hiring managers, or invited to interview, so that you can assist with them with practice interviews, resume revisions, and more!",
+          "featureImage": ""
+        }
+      ]
     },
     {
       "title": "Build and strengthen industry relationships",
-      "description": "We market the relevance of your credentials to employers nationwide.",
+      "description": "We are dedicated to closing the skills gap and tightening connections between idnustry and education. Through our platform, employers have connected directly to their local schools to influence and support training programs through curricula suggestions and material donations.",
       "image": "static/img/shakehands.gif",
       "features": []
     }

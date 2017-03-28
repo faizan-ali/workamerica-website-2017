@@ -14,7 +14,7 @@ export default class SignUp extends React.Component {
       company: ``,
       password: ``,
       showErr: false,
-      existsErr: false
+      existsErr: false,
     };
   }
 
@@ -155,15 +155,15 @@ export default class SignUp extends React.Component {
           <div className='col-lg-4 col-sm-10 align-items-center m-2 contact-form overlay'>
             <div className='col-sm-12 pb-4'>
               First Name*
-              <input type='text' placeholder='First Name' name='firstName' className='col-xl-12' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
+              <input type='text' placeholder='First Name' name='firstName' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Last Name*
-              <input type='text' placeholder='Last Name' name='lastName' className='col-xl-12' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
+              <input type='text' placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Company*
-              <input type='text' placeholder='Company' name='company' className='col-xl-12' value={this.state.company} onChange={this.handleCompanyChange} onBlur={this.handleCompanyChange} />
+              <input type='text' placeholder='Company' name='company' value={this.state.company} onChange={this.handleCompanyChange} onBlur={this.handleCompanyChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Phone Number*
@@ -171,11 +171,11 @@ export default class SignUp extends React.Component {
             </div>
             <div className='col-sm-12 pb-4'>
               E-mail*
-              <input type='email' placeholder='Email Address' name='email' className='col-xl-12' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
+              <input type='email' placeholder='Email Address' name='email' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Password*
-              <input type='password' placeholder='Password' name='password' className='col-xl-12' value={this.state.password} onChange={this.handlePasswordChange} onBlur={this.handlePasswordChange} />
+              <input type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handlePasswordChange} onBlur={this.handlePasswordChange} />
             </div>
             <div className='row col-xl-12'>
               <div className='col-xl-12 pb-4'>
