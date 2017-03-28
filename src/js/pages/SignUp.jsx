@@ -26,6 +26,7 @@ export default class SignUp extends React.Component {
     const {firstName, lastName, email, phone, company, password} = this.state;
 
     if (firstName.length !== 0 && lastName.length !== 0 && email.length !== 0 && company.length !== 0 && password.length !== 0) {
+      this.validate();
       const form = new FormData();
 
       form.append(`firstName`, firstName);
@@ -57,88 +58,27 @@ export default class SignUp extends React.Component {
           this.setState({existsErr: true});
         }
       });
-
-
     } else {
-      if (firstName.length <= 0) {
-        document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
-      }
-      if (lastName.length <= 0) {
-        document.querySelector(`input[name="lastName"]`).classList.add(`empty-field`);
-      }
-      if (email.length <= 0) {
-        document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
-      }
-      if (phone.length <= 0) {
-        document.querySelector(`input[name="phone"]`).classList.add(`empty-field`);
-      }
-      if (company.length <= 0) {
-        document.querySelector(`input[name="company"]`).classList.add(`empty-field`);
-      }
-      if (password.length <= 0) {
-        document.querySelector(`input[name="password"]`).classList.add(`empty-field`);
-      }
-      this.setState({showErr: true});
+      this.validate();
     }
   }
 
-  handleFirstNameChange = e => {
-    this.setState({firstName: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="firstName"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="firstName"]`).classList.remove(`empty-field`);
-    }
-  }
+  handleChange = e => this.setState({[e.currentTarget.name]: e.currentTarget.value});
 
-  handleLastNameChange = e => {
-    this.setState({lastName: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="lastName"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="lastName"]`).classList.remove(`empty-field`);
-    }
-  }
-
-  handleEmailChange = e => {
-    this.setState({email: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="email"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="email"]`).classList.remove(`empty-field`);
-    }
-  }
-
-  handlePhoneChange = e => {
-    this.setState({phone: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="phone"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="phone"]`).classList.remove(`empty-field`);
-    }
-  }
-
-  handleCompanyChange = e => {
-    this.setState({company: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="company"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="company"]`).classList.remove(`empty-field`);
-    }
-  }
-
-  handlePasswordChange = e => {
-    this.setState({password: e.target.value});
-    if (e.target.value.length <= 0) {
-      document.querySelector(`input[name="password"]`).classList.add(`empty-field`);
-    }
-    if (e.target.value.length > 0) {
-      document.querySelector(`input[name="password"]`).classList.remove(`empty-field`);
+  validate = () => {
+    const {firstName, lastName, email, phone, company, password} = this.state;
+    const fields = [firstName, lastName, company, phone, email, password];
+    // reset main error message
+    this.setState({showErr: false});
+    // check all individual fields
+    for (let i = 0;i < fields.length;i ++) {
+      if (fields[i].length <= 0) {
+        // set state for individual errors and main error message
+        this.setState({showErr: true, [`err${i}`]: true});
+      } else {
+        // set state for individual filled in inputs
+        this.setState({[`err${i}`]: false});
+      }
     }
   }
 
@@ -155,27 +95,27 @@ export default class SignUp extends React.Component {
           <div className='col-lg-4 col-sm-10 align-items-center m-2 contact-form overlay'>
             <div className='col-sm-12 pb-4'>
               First Name*
-              <input type='text' placeholder='First Name' name='firstName' value={this.state.firstName} onChange={this.handleFirstNameChange} onBlur={this.handleFirstNameChange} />
+              <input type='text' className={this.state.err0 ? `empty-field` : ``} placeholder='First Name' name='firstName' value={this.state.firstName} onChange={this.handleChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Last Name*
-              <input type='text' placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={this.handleLastNameChange} onBlur={this.handleLastNameChange} />
+              <input type='text' className={this.state.err1 ? `empty-field` : ``} placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={this.handleChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Company*
-              <input type='text' placeholder='Company' name='company' value={this.state.company} onChange={this.handleCompanyChange} onBlur={this.handleCompanyChange} />
+              <input type='text' className={this.state.err2 ? `empty-field` : ``} placeholder='Company' name='company' value={this.state.company} onChange={this.handleChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Phone Number*
-              <MaskedInput mask='(111) 111-1111' name='phone' size='10' value={this.state.phone} onChange={this.handlePhoneChange} onBlur={this.handlePhoneChange} />
+              <MaskedInput className={this.state.err3 ? `empty-field` : ``} mask='(111) 111-1111' name='phone' size='10' value={this.state.phone} onChange={this.handleChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               E-mail*
-              <input type='email' placeholder='Email Address' name='email' value={this.state.email} onChange={this.handleEmailChange} onBlur={this.handleEmailChange} />
+              <input className={this.state.err4 ? `empty-field` : ``} type='email' placeholder='Email Address' name='email' value={this.state.email} onChange={this.handleChange} />
             </div>
             <div className='col-sm-12 pb-4'>
               Password*
-              <input type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handlePasswordChange} onBlur={this.handlePasswordChange} />
+              <input className={this.state.err5 ? `empty-field` : ``} type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange} />
             </div>
             <div className='row col-xl-12'>
               <div className='col-xl-12 pb-4'>
