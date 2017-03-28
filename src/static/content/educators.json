@@ -12,7 +12,7 @@
     {
       "title": "Increase employment opportunities for your students and graduates",
       "description": "Our platform gives employers easy access to message, recruit, and hire your students and graduates. This increases the number of employment opportunities your students are offered, and opens them up to more employment opportunities that take full advantage of the training and credentials they've pursued.",
-      "image": "static/img/data.gif",
+      "image": "static/img/megaphone.gif",
       "features": [
         {
           "featureTitle": "Market your training programs and students to employers",
@@ -21,12 +21,12 @@
         },
         {
           "featureTitle": "Connect your students to local, regional and national employers.",
-          "featureContent": "Our employers are ",
+          "featureContent": "Employers are looking nationwide for talent with the right skills and credentials, so get your students in front of the best opportunities for them!",
           "featureImage": ""
         },
         {
           "featureTitle": "Highlight your industry-recognized credentials",
-          "featureContent": "We supplement your data driven approach to best practices in workforce development.",
+          "featureContent": "Industry recognized credentials are driving recruiting and hiring in the skilled workforce. WorkAmerica puts your credentials front and center for employers to recruit from.",
           "featureImage": ""
         }
       ]
@@ -34,7 +34,7 @@
     {
       "title": "Track job placement outcomes",
       "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment, Perkins and other reporting requirements.",
-      "image": "static/img/megaphone.gif",
+      "image": "static/img/data.gif",
       "features": [
         {
           "featureTitle": "Collect relevant placement data",
