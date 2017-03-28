@@ -130,7 +130,7 @@ const config = {
 
 };
 
-if (process.env.NODE_ENV === `production`) {
+if (process.env.NODE_ENV === `staging`) {
   //remove hot reloading client
   config.entry.shift();
 
@@ -174,6 +174,56 @@ if (process.env.NODE_ENV === `production`) {
       },
       s3UploadOptions: {
         Bucket: `website-stage.workamerica.co`
+      }
+    })
+  ];
+
+}
+
+if (process.env.NODE_ENV === `production`) {
+  //remove hot reloading client
+  config.entry.shift();
+
+  //remove CSS rule and add new one, css in external file
+  config.module.rules.shift();
+  config.module.rules.push({
+    test: /\.css$/,
+    loader: extractCSS.extract([
+      {
+        loader: `css-loader`,
+        options: {
+          importLoaders: 1
+        }
+      },
+      {
+        loader: `postcss-loader`
+      }
+    ])
+  });
+
+  //image optimizing
+  config.module.rules.push({
+    test: /\.(svg|png|jpe?g|gif)$/,
+    loader: `image-webpack-loader`,
+    enforce: `pre`
+  });
+
+  config.plugins = [
+    extractCSS,
+    copy,
+    new UglifyJsPlugin({
+      sourceMap: true, // false returns errors.. -p + plugin conflict
+      comments: false
+    }),
+    new S3Plugin({
+      // s3Options are required
+      s3Options: {
+        accessKeyId: credentials.accessKeyId,
+        secretAccessKey: credentials.secretKey,
+        region: `us-west-2`
+      },
+      s3UploadOptions: {
+        Bucket: `workamerica.co`
       }
     })
   ];

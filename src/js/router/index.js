@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route} from 'react-router';
+import {Router, Route, Redirect} from 'react-router';
 import {IndexRedirect, browserHistory} from 'react-router';
 
 import {App} from '../containers/';
@@ -25,5 +25,6 @@ export default (
       <Route path='/contact-us' component={ContactUs} />
       <Route path='/signup' component={SignUp} />
     </Route>
+    <Redirect from='*' to='/home' />
   </Router>
 );
