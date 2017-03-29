@@ -41,7 +41,7 @@ export default class ContactUs extends React.Component {
 
       this.setState({doingRequest: true});
 
-      fetch(`http://api-stage.workamerica.co/website/contact`, {
+      fetch(`https://api.workamerica.co/website/contact`, {
         method: `POST`,
         body: form
       })

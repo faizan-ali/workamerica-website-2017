@@ -36,7 +36,7 @@ export default class SignUp extends React.Component {
       form.append(`company`, company);
       form.append(`password`, password);
 
-      fetch(`http://api-stage.workamerica.co/website/employer`, {
+      fetch(`https://api.workamerica.co/website/employer`, {
         method: `POST`,
         body: form
       })
