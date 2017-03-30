@@ -1,3 +1,8 @@
+/**
+  * Creates the Signup page.
+  * @exports SignUp Renders the Signup page.
+ */
+
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 import MaskedInput from 'react-maskedinput';
@@ -6,6 +11,17 @@ export default class SignUp extends React.Component {
 
   constructor(props) {
     super(props);
+    /**
+     * @type {object}
+     * @property {string} firstName Controlled input field for firstName value
+     * @property {string} lastName Controlled input field for lastName value
+     * @property {string} email Controlled input field for email value
+     * @property {number} phone Controlled input field for phone value
+     * @property {string} company Controlled input field for company value
+     * @property {string} password Controlled input field for password value
+     * @property {boolean} showErr Boolean to show error message if input is empty (true when sending empty form)
+     * @property {boolean} existsErr Boolean to show error message if account already exists with given email
+     */
     this.state = {
       firstName: ``,
       lastName: ``,
@@ -18,10 +34,17 @@ export default class SignUp extends React.Component {
     };
   }
 
+  /**
+    * Lifecycle method when component has rendered.
+    * Scroll To Top of page.
+   */
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
+  /**
+    * Handle sending the contact form.
+   */
   handleSendMessage = () => {
     const {firstName, lastName, email, phone, company, password} = this.state;
 
@@ -63,8 +86,15 @@ export default class SignUp extends React.Component {
     }
   }
 
+  /**
+   * Handle change event at input form
+   * @param {SytheticEvent} e
+   */
   handleChange = e => this.setState({[e.currentTarget.name]: e.currentTarget.value});
 
+  /**
+   * Validate form after clicking submit
+   */
   validate = () => {
     const {firstName, lastName, email, phone, company, password} = this.state;
     const fields = [firstName, lastName, company, phone, email, password];

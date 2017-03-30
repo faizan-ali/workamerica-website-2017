@@ -1,3 +1,8 @@
+/**
+  * Creates the Home/Employers page.
+  * @exports Home Renders the Home/Employers page.
+ */
+
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 
@@ -18,15 +23,27 @@ export default class Home extends React.Component {
     };
   }
 
+  /**
+    * Lifecycle method when component has rendered.
+    * Scroll To Top of page & set active nav.
+   */
   componentDidMount() {
     window.scrollTo(0, 0);
     document.querySelector(`#employers-nav`).classList.add(`nav-active`);
   }
 
+  /**
+    * Lifecycle method when component is going to unmount.
+    * Unset active nav.
+   */
   componentWillUnmount() {
     document.querySelector(`#employers-nav`).classList.remove(`nav-active`);
   }
 
+  /**
+    * Lifecycle method before component has rendered.
+    * Fetch Page content and blog content.
+   */
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/employer.json`;

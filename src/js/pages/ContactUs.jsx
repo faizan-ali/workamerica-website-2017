@@ -1,3 +1,8 @@
+/**
+  * Creates the Contact Us page.
+  * @exports ContactUs Renders the Contact Us page.
+ */
+
 import React from 'react';
 import Recaptcha from 'react-recaptcha';
 import fetch from 'isomorphic-fetch';
@@ -7,6 +12,20 @@ export default class ContactUs extends React.Component {
 
   constructor(props) {
     super(props);
+    /**
+     * @type {object}
+     * @property {string} firstName Controlled input field for firstName value
+     * @property {string} lastName Controlled input field for lastName value
+     * @property {string} email Controlled input field for email value
+     * @property {number} phone Controlled input field for phone value
+     * @property {string} message Controlled input field for message value
+     * @property {string} title Controlled input field for title value
+     * @property {boolean} showErr Boolean to show error message if input is empty (true when sending empty form)
+     * @property {boolean} showErrCaptcha Boolean to show error message if Recaptcha isn't checked
+     * @property {boolean} noRobot Is true when Recaptcha is checked
+     * @property {boolean} doingRequest Boolean to check if request is happaning (for loading indication)
+     * @property {boolean} complete Is true when message is send - toggles confirmation message
+     */
     this.state = {
       firstName: ``,
       lastName: ``,
@@ -22,10 +41,17 @@ export default class ContactUs extends React.Component {
     };
   }
 
+  /**
+    * Lifecycle method when component has rendered.
+    * Scroll To Top of page.
+   */
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
+  /**
+    * Handle sending the contact form.
+   */
   handleSendMessage = () => {
     const {title, firstName, lastName, email, phone, message, noRobot} = this.state;
 
@@ -56,15 +82,24 @@ export default class ContactUs extends React.Component {
     }
   }
 
+  /**
+   * Debug function to check if Recaptcha has been successfully initiated
+   */
   handleRecaptcha = () => {
     console.log(`Recaptcha loaded.`);
   };
 
+  /**
+   * Handle Recaptcha click event
+   */
   handleVerify = () => {
     console.log(`I am not a robot.`);
     this.setState({noRobot: true});
   };
 
+  /**
+   * Validate form after clicking submit
+   */
   validate = () => {
     const {title, firstName, lastName, email, phone, message, noRobot} = this.state;
     const fields = [title, firstName, lastName, email, phone, message];
@@ -90,6 +125,10 @@ export default class ContactUs extends React.Component {
     }
   }
 
+  /**
+   * Handle change event at input form
+   * @param {SytheticEvent} e
+   */
   handleChange = e => this.setState({[e.currentTarget.name]: e.currentTarget.value});
 
   renderForm() {

@@ -1,3 +1,8 @@
+/**
+  * Creates the About Us page.
+  * @exports AboutUs Renders the About Us page.
+ */
+
 import React from 'react';
 
 const AboutUs = () => {

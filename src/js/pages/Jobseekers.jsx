@@ -1,3 +1,8 @@
+/**
+  * Creates the Jobseekers page.
+  * @exports Jobseekers Renders the Jobseekers page.
+ */
+
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 
@@ -16,15 +21,27 @@ export default class Jobseekers extends React.Component {
     };
   }
 
+  /**
+    * Lifecycle method when component has rendered.
+    * Scroll To Top of page & set active nav.
+   */
   componentDidMount() {
     window.scrollTo(0, 0);
     document.querySelector(`#jobseekers-nav`).classList.add(`nav-active`);
   }
 
+  /**
+    * Lifecycle method when component is going to unmount.
+    * Unset active nav.
+   */
   componentWillUnmount() {
     document.querySelector(`#jobseekers-nav`).classList.remove(`nav-active`);
   }
 
+  /**
+    * Lifecycle method before component has rendered.
+    * Fetch Page content and blog content.
+   */
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/jobseekers.json`;

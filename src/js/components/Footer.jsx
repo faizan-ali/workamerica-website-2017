@@ -9,8 +9,8 @@ import fetch from 'isomorphic-fetch';
 
 export default class Footer extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     /**
      * @type {object}
      * @property {boolean} signedUp Boolean to check if user has signed up (true on succesful API request)

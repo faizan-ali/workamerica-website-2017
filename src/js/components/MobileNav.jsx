@@ -8,8 +8,8 @@ import {Link} from 'react-router';
 
 export default class MobileNav extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     /**
      * @type {object}
      * @property {boolean} showNav Boolean to that manages toggle state of the mobile nav.

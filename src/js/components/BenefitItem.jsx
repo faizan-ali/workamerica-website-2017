@@ -8,8 +8,8 @@ import FeatureItem from './FeatureItem';
 
 export default class BenefitItem extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     /**
      * @type {object}
      * @property {boolean} displayFeatures Boolean to show/hide features

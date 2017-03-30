@@ -1,3 +1,8 @@
+/**
+  * Creates the Educators page.
+  * @exports Educators Renders the Educators page.
+ */
+
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 
@@ -10,22 +15,34 @@ import Loading from '../components/Loading';
 
 export default class Educators extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
 
     };
   }
 
+  /**
+    * Lifecycle method when component has rendered.
+    * Scroll To Top of page & set active nav.
+   */
   componentDidMount() {
     window.scrollTo(0, 0);
     document.querySelector(`#educators-nav`).classList.add(`nav-active`);
   }
 
+  /**
+    * Lifecycle method when component is going to unmount.
+    * Unset active nav.
+   */
   componentWillUnmount() {
     document.querySelector(`#educators-nav`).classList.remove(`nav-active`);
   }
 
+  /**
+    * Lifecycle method before component has rendered.
+    * Fetch Page content content.
+   */
   componentWillMount () {
     // fetch page content
     const dataUrl = `/static/content/educators.json`;
