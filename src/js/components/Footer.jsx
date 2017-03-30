@@ -71,9 +71,9 @@ export default class Footer extends React.Component {
       <footer className='d-flex container-fluid main-footer align-items-start justify-content-center'>
         <nav className='row col-sm-10 col-xl-9'>
           <div className='row col-lg-5 col-sm-12'>
-            <div className='row col-lg-12 pb-2'>
-              <img src='static/svg/logo.svg' alt='WorkAmerica' className='logo' />
-              Connecting Education to Employment.
+            <div className='row col-lg-12 p-0 pl-4'>
+              <img src='static/svg/logo.svg' alt='WorkAmerica' className='col-lg-12 logo' />
+              <p className='col-lg-12 mb-0'>Connecting Education to Employment.</p>
             </div>
             <div className='col-lg-6 col-sm-6 pt-4'>
               <ul>
@@ -88,7 +88,7 @@ export default class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className='col-lg-6 col-sm-6 p-4'>
+            <div className='col-lg-6 col-sm-6 pt-4'>
               <ul>
                 <li>
                   <a href='http://blog.workamerica.co/' target='_blank'>Blog</a>
@@ -102,12 +102,13 @@ export default class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div className='row col-lg-4 newsletter-signup align-items-end justify-content-start'>
-            <h2 className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>Stay up to date!</h2>
-            <p className='col-md-12 justify-content-md-center justify-content-lg-start pb-4'>The best way to keep up with our progress? Sign up for Email Notifications.</p>
+          <hr className='row col-lg-12 hidden-lg-up' />
+          <div className='row col-lg-5 align-items-end newsletter-signup'>
+            <h2 className='col-md-12 justify-content-md-center justify-content-lg-start mb-4'>Stay up to date!</h2>
+            <p className='col-md-12 justify-content-md-center justify-content-lg-start p-0 pl-4 mb-4'>The best way to keep up with our progress? Sign up for Email Notifications.</p>
               {
                 !this.state.signedUp && !this.state.doingRequest ?
-                  <div className='col-md-12 justify-content-md-center justify-content-lg-start'>
+                  <div className='col-md-12 justify-content-md-center justify-content-lg-start mb-0'>
                     <input type='email' required placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
                     <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
                     {this.state.errMsg ? <p className='error'>Please enter your email address.</p> : ``}
@@ -131,10 +132,11 @@ export default class Footer extends React.Component {
                 ``
               }
           </div>
-          <div className='row col-lg-3 col-md-12 col-sm-12 social-icons align-items-end justify-content-lg-end justify-content-md-center justify-content-sm-center'>
-            <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='fa fa-linkedin-square' aria-hidden='true'></i></a>
-            <a href='https://www.facebook.com/workamerica.co/' target='_blank'><i className='fa fa-facebook-square' aria-hidden='true'></i></a>
-            <a href='https://twitter.com/work_america' target='_blank'><i className='fa fa-twitter-square' aria-hidden='true'></i></a>
+          <hr className='row col-lg-12 hidden-lg-up' />
+          <div className='row col-lg-2 col-md-12 col-sm-12 social-icons align-items-end justify-content-center justify-content-lg-end'>
+            <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='fa fa-linkedin' aria-hidden='true'></i></a>
+            <a href='https://www.facebook.com/workamerica.co/' target='_blank'><i className='fa fa-facebook' aria-hidden='true'></i></a>
+            <a href='https://twitter.com/work_america' target='_blank'><i className='fa fa-twitter' aria-hidden='true'></i></a>
           </div>
         </nav>
       </footer>
