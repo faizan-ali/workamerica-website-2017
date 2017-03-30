@@ -109,7 +109,7 @@ export default class Footer extends React.Component {
               {
                 !this.state.signedUp && !this.state.doingRequest ?
                   <div className='col-md-12 justify-content-md-center justify-content-lg-start mb-0'>
-                    <input type='email' required placeholder='Email adress' name='email' value={this.state.email} onChange={this.handleEmailChange} />
+                    <input type='email' required placeholder='Email address' name='email' value={this.state.email} onChange={this.handleEmailChange} />
                     <button className='submit-newsletter' onClick={this.handleSignUp}>Go</button>
                     {this.state.errMsg ? <p className='error'>Please enter your email address.</p> : ``}
                   </div>

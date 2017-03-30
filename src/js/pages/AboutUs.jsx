@@ -50,7 +50,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className='row blog-section align-items-center justify-content-center'>
+      <div className='row blog-section align-items-center justify-content-center section-end'>
         <div className='col-sm-10 col-xl-3 align-items-center contact-card p-0'>
           <img className='parallax' src='static/img/map.jpg' />
           <p><br />1900 M St NW<br />Washington DC, 20006<br />877-750-2968<br />info@workamerica.co</p>

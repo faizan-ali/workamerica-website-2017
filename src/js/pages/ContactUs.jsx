@@ -213,7 +213,7 @@ export default class ContactUs extends React.Component {
           </div>
         </div>
 
-        <div className='row blog-section justify-content-center'>
+        <div className='row blog-section justify-content-center section-end'>
           {
             !this.state.complete && !this.state.doingRequest ?
               this.renderForm()
