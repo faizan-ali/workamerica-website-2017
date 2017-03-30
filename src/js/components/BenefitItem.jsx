@@ -1,16 +1,27 @@
-import React, {PropTypes} from 'react';
+/**
+  * Creates a single benefit item
+  * @exports BenefitItem Renders the benefit item.
+ */
 
+import React, {PropTypes} from 'react';
 import FeatureItem from './FeatureItem';
 
 export default class BenefitItem extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+    /**
+     * @type {object}
+     * @property {boolean} displayFeatures Boolean to show/hide features
+     */
     this.state = {
       displayFeatures: false
     };
   }
 
+  /**
+    * Handle learn more click event
+   */
   handleLearnMoreClick = () => {
     if (this.state.displayFeatures) {
       this.setState({displayFeatures: false});
@@ -52,6 +63,13 @@ export default class BenefitItem extends React.Component {
   }
 }
 
+/**
+  * PropTypes
+  * @property {string} title The title of the benefit item.
+  * @property {string} description The discription of the benefit item.
+  * @property {string} image The path to the image/animation for the benefit item.
+  * @property {array} features An array of features for the benefit item (can be an empty array).
+ */
 BenefitItem.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
@@ -60,8 +78,8 @@ BenefitItem.propTypes = {
 };
 
 BenefitItem.defaultProps = {
-  title: `Empty Benefit Title`,
-  description: `Empty Benefit Description`,
-  image: `No Image Provided`,
-  features: [`No Features Provided`],
+  title: ``,
+  description: ``,
+  image: ``,
+  features: [],
 };

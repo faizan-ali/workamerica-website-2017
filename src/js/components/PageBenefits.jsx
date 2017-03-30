@@ -1,3 +1,8 @@
+/**
+  * Creates the benefits section.
+  * @exports PageBenefits Renders the benefits section.
+ */
+
 import React, {PropTypes} from 'react';
 
 import BenefitItem from './BenefitItem';
@@ -17,12 +22,16 @@ const PageBenefits = ({source}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {array} source Array with single benefit items.
+ */
 PageBenefits.propTypes = {
   source: PropTypes.array,
 };
 
 PageBenefits.defaultProps = {
-  source: [`No Benefits Specified`],
+  source: [],
 };
 
 export default PageBenefits;

@@ -1,3 +1,8 @@
+/**
+  * Creates the footer.
+  * @exports Footer Renders the Footer.
+ */
+
 import React from 'react';
 import {Link} from 'react-router';
 import fetch from 'isomorphic-fetch';
@@ -6,6 +11,13 @@ export default class Footer extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+    /**
+     * @type {object}
+     * @property {boolean} signedUp Boolean to check if user has signed up (true on succesful API request)
+     * @property {boolean} doingRequest Boolean to check if request is happaning (for loading indication)
+     * @property {string} email Controlled input field for email value
+     * @property {boolean} errMsg Boolean to show error message if input is empty (true when sending empty form)
+     */
     this.state = {
       signedUp: false,
       doingRequest: false,
@@ -14,6 +26,9 @@ export default class Footer extends React.Component {
     };
   }
 
+  /**
+    * Handle Newsletter Sign Up click event
+   */
   handleSignUp = () => {
     if (this.state.email.length > 0) {
       this.setState({doingRequest: true, errMsg: false});
@@ -37,6 +52,10 @@ export default class Footer extends React.Component {
     }
   }
 
+  /**
+   * Handle change event at input form
+   * @param {SytheticEvent} e
+   */
   handleEmailChange = e => {
     this.setState({email: e.target.value});
     if (e.target.value.length <= 0) {

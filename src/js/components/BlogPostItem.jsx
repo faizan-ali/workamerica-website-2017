@@ -1,3 +1,8 @@
+/**
+  * Creates a single Blog Post item
+  * @exports BlogPostItem Renders the Blog Post item.
+ */
+
 import React, {PropTypes} from 'react';
 import moment from 'moment';
 
@@ -15,6 +20,12 @@ const BlogPostItem = ({link, title, date}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {string} link The link to the Blog Post.
+  * @property {object} title The title Object from the Wordpress API.
+  * @property {string} date The timestamp from the Blog Post.
+ */
 BlogPostItem.propTypes = {
   link: PropTypes.string,
   title: PropTypes.object,

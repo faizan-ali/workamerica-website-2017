@@ -1,3 +1,8 @@
+/**
+  * Creates the Page loading indicator
+  * @exports Loading Renders the Page loading indicator.
+ */
+
 import React from 'react';
 
 const Loading = () => {

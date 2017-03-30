@@ -1,3 +1,8 @@
+/**
+  * Creates the social proof section.
+  * @exports PageSocial Renders the social proof section.
+ */
+
 import React, {PropTypes} from 'react';
 
 const PageSocial = ({source}) => {
@@ -18,6 +23,10 @@ const PageSocial = ({source}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {object} source Object with social proof copy from JSON static/content/ folder.
+ */
 PageSocial.propTypes = {
   source: PropTypes.object,
 };

@@ -1,3 +1,8 @@
+/**
+  * Creates the navigation for mobile devices
+  * @exports MobileNav Renders the Mobile Navigation.
+ */
+
 import React from 'react';
 import {Link} from 'react-router';
 
@@ -5,11 +10,18 @@ export default class MobileNav extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+    /**
+     * @type {object}
+     * @property {boolean} showNav Boolean to that manages toggle state of the mobile nav.
+     */
     this.state = {
       showNav: false
     };
   }
 
+  /**
+    * Handle Mobile navigation toggle event
+   */
   handleToggleNav = () => {
     if (this.state.showNav) {
       this.setState({showNav: false});

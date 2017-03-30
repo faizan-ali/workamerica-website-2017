@@ -1,5 +1,9 @@
-import React, {PropTypes} from 'react';
+/**
+  * Creates the Blog posts section.
+  * @exports PageBlogPosts Renders the Blog posts section.
+ */
 
+import React, {PropTypes} from 'react';
 import BlogPostItem from './BlogPostItem';
 
 const PageBlogPosts = ({source, end}) => {
@@ -28,6 +32,11 @@ const PageBlogPosts = ({source, end}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {array} source Array with Wordpress API data.
+  * @property {boolean} end Boolean to trigger end-of-page styling. (Use when last section on a page)
+ */
 PageBlogPosts.propTypes = {
   source: PropTypes.array,
   end: PropTypes.bool,

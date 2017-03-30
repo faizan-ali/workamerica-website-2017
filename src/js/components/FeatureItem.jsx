@@ -1,3 +1,8 @@
+/**
+  * Creates a single Feature item
+  * @exports FeatureItem Renders the Feature item.
+ */
+
 import React, {PropTypes} from 'react';
 
 const FeatureItem = ({featureTitle, featureContent, featureImage}) => {
@@ -14,6 +19,12 @@ const FeatureItem = ({featureTitle, featureContent, featureImage}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {string} featureTitle The title of the feature.
+  * @property {string} featureContent The content body of the feature.
+  * @property {string} featureImage The path to the image of of the feature (can be empty string).
+ */
 FeatureItem.propTypes = {
   featureTitle: PropTypes.string,
   featureContent: PropTypes.string,

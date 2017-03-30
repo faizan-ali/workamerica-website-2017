@@ -1,3 +1,8 @@
+/**
+  * Creates the main navigation.
+  * @exports Navigation Renders the main Navigation.
+ */
+
 import React from 'react';
 import {Link} from 'react-router';
 

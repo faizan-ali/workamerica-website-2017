@@ -1,3 +1,8 @@
+/**
+  * Creates the page landing section.
+  * @exports PageLanding Renders the page landing section.
+ */
+
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
@@ -36,6 +41,11 @@ const PageLanding = ({source, center}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {object} source Object with page landing copy from JSON static/content/ folder.
+  * @property {boolean} center If true, hero image will be centered.
+ */
 PageLanding.propTypes = {
   source: PropTypes.object,
   center: PropTypes.bool

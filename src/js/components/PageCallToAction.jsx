@@ -1,3 +1,8 @@
+/**
+  * Creates the call to action section.
+  * @exports PageCallToAction Renders the call to action section.
+ */
+
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
@@ -24,6 +29,10 @@ const PageCallToAction = ({source}) => {
   );
 };
 
+/**
+  * PropTypes
+  * @property {object} source Object with call to action copy from JSON static/content/ folder.
+ */
 PageCallToAction.propTypes = {
   source: PropTypes.object,
 };
