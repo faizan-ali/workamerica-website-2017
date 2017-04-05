@@ -134,9 +134,9 @@ export default class Footer extends React.Component {
           </div>
           <hr className='row col-lg-12 hidden-lg-up' />
           <div className='row col-lg-2 col-md-12 col-sm-12 social-icons align-items-end justify-content-center justify-content-lg-end'>
-            <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='fa fa-linkedin' aria-hidden='true'></i></a>
-            <a href='https://www.facebook.com/workamerica.co/' target='_blank'><i className='fa fa-facebook' aria-hidden='true'></i></a>
-            <a href='https://twitter.com/work_america' target='_blank'><i className='fa fa-twitter' aria-hidden='true'></i></a>
+            <a href='https://www.linkedin.com/company/workamerica' target='_blank'><i className='icon-linkedin' aria-hidden='true'></i></a>
+            <a href='https://www.facebook.com/workamerica.co/' target='_blank'><i className='icon-facebook' aria-hidden='true'></i></a>
+            <a href='https://twitter.com/work_america' target='_blank'><i className='icon-twitter' aria-hidden='true'></i></a>
           </div>
         </nav>
       </footer>

@@ -46,9 +46,9 @@ export default class BenefitItem extends React.Component {
           {this.props.features.length > 0 ?
             <span className='learn-more' onClick={this.handleLearnMoreClick}>
               {!this.state.displayFeatures ?
-              <span><i className='fa fa-plus-square-o' aria-hidden='true'></i> learn more</span>
+              <span><i className='icon-plus-squared-alt' aria-hidden='true'></i> learn more</span>
               :
-              <span><i className='fa fa-minus-square-o' aria-hidden='true'></i> see less</span>}
+              <span><i className='icon-minus-squared-alt' aria-hidden='true'></i> see less</span>}
             </span>
           :
             ``
