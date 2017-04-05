@@ -6,25 +6,25 @@
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more",
     "secondCTALink": "#",
-    "landingImage": "static/img/jobseeker.png"
+    "landingImage": "jobseeker.png"
   },
   "benefits": [
     {
       "title": "Get hired in the fields you trained for/take full advantage of your training and credentials.",
       "description": "Join an exclusive network that only allows credentialed talent, so your profile doesn’t get lost amongst hundreds of others like on Indeed and Monster.",
-      "image": "static/img/skilled-trades-w.gif",
+      "image": "skilled-trades-w",
       "features": []
     },
     {
       "title": "Get contacted be employers, rather than you having to find and contact them.",
       "description": "Talk directly with recruiters and hiring managers via text, phone and email.",
-      "image": "static/img/search-certificates.gif",
+      "image": "search-certificates",
       "features": []
     },
     {
       "title": "Minimize down time between school and work.",
       "description": "Unlock your career potential. Line up employment before you graduate, or get an internship, apprenticeship or clinical while still in school.",
-      "image": "static/img/clock.gif",
+      "image": "clock",
       "features": []
     }
   ]

@@ -34,7 +34,9 @@ export default class BenefitItem extends React.Component {
     return (
       <article className='col-md-12 d-flex flex-wrap benefit-item justify-content-center'>
         <div className='row col-md-5 p-4 align-items-center justify-content-center mb-4'>
-          <img src={this.props.image} alt='certified candidates' height='150' />
+          <video autoPlay loop height='150'>
+            <source src={`static/img/${this.props.image}.mp4`} type='video/mp4' />
+          </video>
         </div>
         <div className='row col-md-5 p-4 mb-4'>
           <h2>{this.props.title}</h2>

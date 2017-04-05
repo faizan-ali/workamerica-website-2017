@@ -91,7 +91,7 @@ export default class Footer extends React.Component {
             <div className='col-lg-6 col-sm-6 pt-4'>
               <ul>
                 <li>
-                  <a href='http://blog.workamerica.co/' target='_blank'>Blog</a>
+                  <Link to='/privacy'>Privacy Policy</Link>
                 </li>
                 <li>
                   <Link to='/about-us'>About us</Link>

@@ -12,11 +12,19 @@ const PageLanding = ({source, center}) => {
       <div className='row landing-section justify-content-center'>
         {center ?
           <figure className='header-image-center d-flex justify-content-center align-items-center'>
-            <img className='parallax' src={source.landingImage} />
+            <img className='parallax' src={`static/img/${source.landingImage}`}
+              srcSet={`static/img/sm-${source.landingImage} 90w,
+                      static/img/md-${source.landingImage} 570w,
+                      static/img/lg-${source.landingImage} 931w,
+                      static/img/xl-${source.landingImage} 2292w`} />
           </figure>
           :
           <figure className='header-image'>
-            <img className='parallax' src={source.landingImage} />
+            <img className='parallax' src={`static/img/${source.landingImage}`}
+              srcSet={`static/img/sm-${source.landingImage} 400w,
+                      static/img/md-${source.landingImage} 800w,
+                      static/img/lg-${source.landingImage} 1200w,
+                      static/img/xl-${source.landingImage} 2292w`} />
           </figure>
         }
         <div className='row col-sm-10 col-xl-9 align-items-center'>

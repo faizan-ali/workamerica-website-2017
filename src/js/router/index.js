@@ -3,7 +3,7 @@ import {Router, Route, Redirect} from 'react-router';
 import {IndexRedirect, browserHistory} from 'react-router';
 
 import {App} from '../containers/';
-import {Home, Educators, Jobseekers, AboutUs, ContactUs, SignUp} from '../pages/';
+import {Home, Educators, Jobseekers, AboutUs, ContactUs, SignUp, PrivacyPolicy} from '../pages/';
 
 import ReactGA from 'react-ga';
 
@@ -24,6 +24,7 @@ export default (
       <Route path='/about-us' component={AboutUs} />
       <Route path='/contact-us' component={ContactUs} />
       <Route path='/signup' component={SignUp} />
+      <Route path='/privacy' component={PrivacyPolicy} />
     </Route>
     <Redirect from='*' to='/home' />
   </Router>

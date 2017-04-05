@@ -10,7 +10,10 @@ const PageSocial = ({source}) => {
     <section className='container-fluid'>
       <div className='row social-section justify-content-center align-items-center'>
         <figure className='social-image-container d-flex justify-content-center align-items-center'>
-          <img className='social-image' src={source.picture} />
+          <img className='social-image' src={`static/img/${source.picture}`}
+            srcSet={`static/img/sm-${source.picture} 400w,
+                    static/img/md-${source.picture} 800w,
+                    static/img/lg-${source.picture} 1200w`} />
         </figure>
         <div className='row col-xl-3 offset-xl-3 col-md-4 offset-md-2 p-4 social-quote align-items-center'>
           <h1>{source.quote}</h1>

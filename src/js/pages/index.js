@@ -4,3 +4,4 @@ export Jobseekers from './Jobseekers';
 export AboutUs from './AboutUs';
 export ContactUs from './ContactUs';
 export SignUp from './SignUp';
+export PrivacyPolicy from './PrivacyPolicy';

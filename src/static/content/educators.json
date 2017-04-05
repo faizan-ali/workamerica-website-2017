@@ -6,13 +6,13 @@
     "mainCTALink": "/contact-us",
     "secondCTA": "Learn more",
     "secondCTALink": "#",
-    "landingImage": "static/img/hero-edu.png"
+    "landingImage": "hero-edu.jpg"
   },
   "benefits": [
     {
       "title": "Increase employment opportunities for your students and graduates",
       "description": "Our platform gives employers easy access to message, recruit, and hire your students and graduates. This increases the number of employment opportunities your students are offered, and opens them up to more employment opportunities that take full advantage of the training and credentials they've pursued.",
-      "image": "static/img/megaphone.gif",
+      "image": "megaphone",
       "features": [
         {
           "featureTitle": "Market your training programs and students to employers",
@@ -34,7 +34,7 @@
     {
       "title": "Track job placement outcomes",
       "description": "For free, we provide you with any placement data we collect, to supplement your Gainful Employment, Perkins and other reporting requirements.",
-      "image": "static/img/data.gif",
+      "image": "data",
       "features": [
         {
           "featureTitle": "Collect relevant placement data",
@@ -56,7 +56,7 @@
     {
       "title": "Build and strengthen industry relationships",
       "description": "We are dedicated to closing the skills gap and tightening connections between idnustry and education. Through our platform, employers have connected directly to their local schools to influence and support training programs through curricula suggestions and material donations.",
-      "image": "static/img/shakehands.gif",
+      "image": "shakehands",
       "features": []
     }
   ],
@@ -65,13 +65,7 @@
       "quote": "Join our growing network of education and training partners.",
       "quoteFrom": "",
       "quotePosition": "",
-      "picture": "static/img/schools.png"
-    },
-    {
-      "quote": "Join our growing network of education and training partners.",
-      "quoteFrom": "",
-      "quotePosition": "",
-      "picture": "static/img/schools.png"
+      "picture": "schools.jpg"
     }
   ],
   "callToAction": {

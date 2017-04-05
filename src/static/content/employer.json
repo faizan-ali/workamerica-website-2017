@@ -6,13 +6,13 @@
     "mainCTALink": "/signup",
     "secondCTA": "Learn more",
     "secondCTALink": "#",
-    "landingImage": "static/img/hero-profile.png"
+    "landingImage": "hero-profile.png"
   },
   "benefits": [
     {
       "title": "Quickly Recruit Skilled Candidates",
       "description": "Save time and find that perfect candidate faster by only reviewing trained and verified job seekers for your skills-based openings, without having to dig through hundreds of unqualified resumes.",
-      "image": "static/img/search-certificates.gif",
+      "image": "search-certificates",
       "features": [
         {
           "featureTitle": "Exclusively for Verified Workers",
@@ -34,7 +34,7 @@
     {
       "title": "Source From Untapped Talent Pools",
       "description": "On WorkAmerica, you'll find candidates that aren’t on those other job boards, because we go straight to the source: schools.",
-      "image": "static/img/skilled-trades-w.gif",
+      "image": "skilled-trades-w",
       "features": [
         {
           "featureTitle": "Immediately Expand your Recruiting Network",
@@ -56,7 +56,7 @@
     {
       "title": "Build Your Talent Pipeline",
       "description": "Build a strong talent pipeline for your company with high quality skilled talent to ensure your long-term competitive advantage.",
-      "image": "static/img/talent-pool.gif",
+      "image": "talent-pool",
       "features": [
         {
           "featureTitle": "Stay Ahead of the Recruiting Curve",
@@ -81,7 +81,7 @@
       "quote": "“WorkAmerica alleviates the uncertainty many businesses face in filling future workforce needs”",
       "quoteFrom": "US Chamber of Commerce Foundation",
       "quotePosition": "Talent Pipeline Whitepaper",
-      "picture": "static/img/fmachinist.jpg"
+      "picture": "fmachinist.jpg"
     }
   ],
   "callToAction": {

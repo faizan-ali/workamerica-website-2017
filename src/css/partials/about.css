@@ -25,3 +25,8 @@
 .about-quote {
   padding: 5rem;
 }
+
+.privacy-section {
+  padding: 18rem 0 6rem;
+  border-bottom: .1rem solid #e6e6e6;
+}
