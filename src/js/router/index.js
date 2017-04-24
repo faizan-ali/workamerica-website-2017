@@ -4,6 +4,7 @@ import {IndexRedirect, browserHistory} from 'react-router';
 
 import {App} from '../containers/';
 import {Home, Educators, Jobseekers, AboutUs, ContactUs, SignUp, PrivacyPolicy} from '../pages/';
+import PageVideo from '../components/PageVideo';
 
 import ReactGA from 'react-ga';
 
@@ -25,6 +26,7 @@ export default (
       <Route path='/contact-us' component={ContactUs} />
       <Route path='/signup' component={SignUp} />
       <Route path='/privacy' component={PrivacyPolicy} />
+      <Route path='/video' component={PageVideo} />
     </Route>
     <Redirect from='*' to='/home' />
   </Router>

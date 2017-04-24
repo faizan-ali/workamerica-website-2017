@@ -4,6 +4,61 @@
   border-bottom: .1rem solid #e6e6e6;
 }
 
+.full-scr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, #003050, #034b7a);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-preview {
+  width: 100%;
+  background-image: url('https://media.giphy.com/media/FRR9jSrzEJlxS/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 11.3rem;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.video-preview-overlay {
+  background-color: RGBA(0, 59, 102, .70);
+  height: 11.3rem;
+  border-radius: .5rem;
+  color: white;
+  transition: .3s;
+
+  &:hover {
+    background-color: RGBA(0, 0, 0, .70);
+  }
+}
+
+.video {
+  width: 100%;
+}
+
+.video-close {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+  background-color: RGBA(0, 0, 0, .70);
+  padding: 0 1rem;
+  z-index: 1001;
+  cursor: pointer;
+}
+
 .intro-message {
   background-color: white;
   box-shadow: .05rem .05rem 1rem .1rem rgba(0, 0, 0, .1);
@@ -41,6 +96,13 @@
 .benefit-section, .cta-section, .blog-section {
   padding: 6rem 0;
   border-bottom: .1rem solid #e6e6e6;
+}
+
+.video-section {
+  padding: 6rem 0;
+  border-bottom: .1rem solid #e6e6e6;
+  background-color: RGBA(0, 59, 102, 1.00);
+  color: white;
 }
 
 .benefit-item {

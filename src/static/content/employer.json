@@ -6,7 +6,8 @@
     "mainCTALink": "/signup",
     "secondCTA": "Learn more",
     "secondCTALink": "#",
-    "landingImage": "hero-profile.png"
+    "landingImage": "hero-profile.png",
+    "video": "true"
   },
   "benefits": [
     {

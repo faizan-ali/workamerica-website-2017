@@ -6,25 +6,27 @@
   <title>WorkAmerica - Connecting education to employment, exclusively for the skilled labor force.</title>
   <meta name='viewport' content='initial-scale=1.0, width=device-width' />
   <link rel="stylesheet" href="static/css/fontello.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!-- Slaask Chat: ASYNC -->
-  <script>
-    (function() {
-      var slk = document.createElement('script');
-      slk.src = 'https://cdn.slaask.com/chat.js';
-      slk.type = 'text/javascript';
-      slk.async = 'true';
-      slk.onload = slk.onreadystatechange = function() {
-        var rs = this.readyState;
-        if (rs && rs != 'complete' && rs != 'loaded') return;
-        try {
-          _slaask.init('0b75a46e0da9477b6cdaeafd34d8ce2e');
-        } catch (e) {}
-      };
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(slk, s);
-    })();
-  </script>
+    <script>
+      (function() {
+        var slk = document.createElement('script');
+        slk.src = 'https://cdn.slaask.com/chat.js';
+        slk.type = 'text/javascript';
+        slk.async = 'true';
+        slk.onload = slk.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          try {
+            _slaask.init('0b75a46e0da9477b6cdaeafd34d8ce2e');
+          } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(slk, s);
+      })();
+    </script>
 
   <!-- General Meta -->
   <meta name="description" content="WorkAmerica connects job seekers, employers and educators for recruiting and hiring. We are on a mission to close the skills gap by connecting education to employment." />
