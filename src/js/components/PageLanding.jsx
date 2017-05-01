@@ -34,25 +34,25 @@ const PageLanding = ({source, center}) => {
               {source.introduction}
             </p>
             <div className='row'>
-              <div className='col-xl-7'>
-                <div className='row col-xl-12'>
+              <div className='col-xl-12'>
+                <div className='row col-xl-12 no-gutter'>
                 <Link to={source.mainCTALink}><button className='cta-primary'>{source.mainCTA}</button></Link>
                 </div>
+                {source.video ?
+                <div className='row col-xl-12 d-flex justify-content-end no-gutter mr-0 ml-0 pl-0 pr-0'>
+                  <Link to='/video' className='video-preview'>
+                    <div className='video-preview-overlay d-flex justify-content-center align-items-center m-0'>
+                      <i className='fa fa-play-circle mr-2' aria-hidden='true'></i>See how it works
+                    </div>
+                  </Link>
+                </div>
+                :
+                ``
+                }
                 <div className='row col-xl-12'>
                 {source.secondCTA ? <button className='cta-secondary' onClick={() => {document.querySelector(`#benefits`).scrollIntoView({block: `start`, behavior: `smooth`});}}>{source.secondCTA}</button> : ``}
                 </div>
               </div>
-              {source.video ?
-              <div className='col-xl-5 d-flex justify-content-end'>
-                <Link to='/video' className='video-preview'>
-                  <div className='video-preview-overlay d-flex justify-content-center align-items-center'>
-                    <i className='fa fa-play-circle mr-2' aria-hidden='true'></i>Watch the video
-                  </div>
-                </Link>
-              </div>
-              :
-              ``
-              }
             </div>
 
           </div>
